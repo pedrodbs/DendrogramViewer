@@ -1,0 +1,87 @@
+﻿<!doctype html>
+<meta charset="utf-8" />
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+    <title>Clustering Dendrogram Visualizer</title>
+</head>
+<body>
+    
+<table id="ui-table">
+    <tr>
+        <td id="options-column">
+            <p class="options-title">Visual options:</p>
+            <div class="chkbox-box">
+                Vertical layout:
+                <div style="float:right">
+                    <input id="vert-layout-chkbox" type="checkbox" checked onclick="update()">
+                    <label for="vert-layout-chkbox"></label>
+                </div>
+            </div>
+            <div class="chkbox-box">
+                Grayscale:
+                <div style="float:right">
+                    <input id="grayscale-chkbox" type="checkbox" onclick="update()">
+                    <label for="grayscale-chkbox"></label>
+                </div>
+            </div>
+            <div class="chkbox-box">
+                Straight links:
+                <div style="float:right">
+                    <input id="straight-chkbox" type="checkbox" checked onclick="update()">
+                    <label for="straight-chkbox"></label>
+                </div>
+            </div>
+            <div class="options-box">
+                <input id="color-picker" type="hidden" onchange="update()" value="none">
+                <button id="pick-color-btn" class="jscolor {valueElement: 'color-picker'}" style="border:1px solid #777; width:140px; margin-bottom:5px">
+                    Back color
+                </button>
+            </div>
+            <hr class="options-line" />
+            <p class="options-title">Interaction options:</p>
+            <div class="chkbox-box">
+                Zoom & drag:
+                <div style="float:right">
+                    <input id="zoom-chkbox" type="checkbox" onclick="update()">
+                    <label for="zoom-chkbox"></label>
+                </div>
+            </div>
+            <input class="options-box" id="center-button" type="button" value="Reset view" onclick="resetDragZoom()" />
+            <hr class="options-line" />
+            <p class="options-title">Dendrogram options:</p>
+            <div class="options-box" style="margin-bottom: 15px;">
+                Dist. threshold:
+                <div class="options-box-value" id="slider-update-value">0</div>
+            </div>
+            <div id="slider-update"></div>
+            <hr class="options-line" />
+            <input class="options-box" id="save-button" type="button" value="Download" onclick="saveImage()" />
+        </td>
+        <td id="container-column">
+            <div id="container"></div>
+        </td>
+    </tr>
+</table>
+
+<script src="scripts/d3.v3.min.js"></script>
+<script src="scripts/utilFunctions.js"></script>
+<script src="scripts/nouislider.min.js"></script>
+<script src="scripts/jscolor.min.js"></script>
+<script src="scripts/colorPalettes.js"></script>
+<script src="scripts/variables.js"></script>
+<script src="scripts/drag-zoom.js"></script>
+<script src="scripts/svg-crowbar-2.js"></script>
+<script src="scripts/svgUtilFunctions.js"></script>
+<script src="scripts/uiFunctions.js"></script>
+    
+
+<script>
+    //initializes all the D3 elements
+    window.initUI();
+</script>
+
+</body>
+
+</html>

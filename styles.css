@@ -1,0 +1,246 @@
+﻿/* putting "wrong" style to all elements that we want to personalize and save with the svg*/
+*{
+    font-size: 3px;
+    font-family: Helvetica;
+    font-weight: 350;
+    color: red;
+    stroke-width: 0px;
+}
+
+/* Global rules for all elements */
+.options-box-value,
+.options-title,
+.options-box,
+.chkbox-box,
+.jscolor
+{
+    font-size: 14px;
+    font-family: Candara;
+    font-weight: normal;
+    fill: black;
+    color: black;
+}
+
+table { border: none; border-collapse: collapse; }
+table td {
+	 border: 1px solid #777;  
+	 vertical-align: top;
+}
+
+#container {
+    /*border: 1px solid #777;*/
+    fill: none;
+}
+
+/* Side options styles */
+
+.noUi-horizontal,
+.options-title,
+.options-box,
+.options-line,
+.chkbox-box {
+    margin-top : 10px;
+    margin-bottom : 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.options-box-value
+{
+    float: right;    
+}
+
+.options-title{
+    font-weight:bold;
+    text-align: left;
+    margin-bottom : 10px;
+}
+
+.chkbox-box{
+    margin-top : 10px;
+    margin-bottom : 10px;
+    text-align: left;
+}
+
+.options-line { 
+    background-color: #777;
+    height: 1px;
+    border: 0 none;
+    margin-top: 20px;
+    margin-top: 20px;
+}
+
+input[type="checkbox"] {
+	display: none;
+	-webkit-appearance: none;
+	-moz-appearance:none;
+}
+
+input[type="checkbox"] + label {
+	background-color: #eee;
+	border: 1px solid #777;
+	padding: 10px;
+	display: inline-block;
+	position: relative;
+	content: " ";
+	transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -webkit-transition: all 0.3s ease 0s;
+}
+
+input[type="checkbox"]:hover + label {
+	background-color: #444;
+	color: white;
+}
+
+input[type="checkbox"]:hover + label:after {
+	content: '\2714';
+	font-size: 15px;
+	position: absolute;
+	top: -2px;
+	left: 4px;
+	color: white;
+}
+
+input[type="checkbox"]:checked + label {
+	color: #000;
+}
+
+input[type="checkbox"]:checked + label:after {
+	content: '\2714';
+	font-size: 15px;
+	position: absolute;
+	top: -2px;
+	left: 4px;
+	color: #000;
+}
+
+input[type=button] {
+    font: 14px Candara;
+    width: 140px;
+    border: 1px solid #777;
+    color: #000;
+    background: #eee;
+    cursor: pointer;
+    display: inline-block;
+    /*height: 37px;*/
+    height: 30px;
+    /*padding: 7px 10px;*/
+    padding: 0px 10px;
+    text-transform: none;
+    text-align: center;
+    transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -webkit-transition: all 0.3s ease 0s;
+}
+
+input[type=button]:hover {
+    background: #444;
+    color: white;
+}
+
+/* Tree styles */
+.node {
+    cursor: pointer;
+}
+
+.node circle {
+    fill: #fff;
+    stroke-width: 1.5px;
+}
+
+.node text {
+    font-size: 14px;
+    font-family: Candara;
+    font-weight: normal;
+}
+
+.link {
+    fill: none;
+    stroke-width: 1.5px;
+}
+
+/* Scale styles */
+line {
+    stroke-width: 1px;
+}
+
+.threshLine {
+    stroke-width: 1px;
+    stroke-dasharray: 2;
+    stroke: #777;
+}
+
+.label {
+    font-size: 16px;
+    font-family: Candara;
+    font-weight: bold;
+}
+
+/* Numeric slider styles */
+.noUi-target,
+.noUi-target * {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-ms-touch-action: none;
+		touch-action: none;	
+	-ms-user-select: none;
+	-moz-user-select: none;
+}
+
+.noUi-origin {
+	position: absolute;
+	right: 0;
+	top: 0;
+	left: 0;
+	bottom: 0;
+}
+
+.noUi-base {
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+	width: 100%;
+	height: 100%;
+	position: relative;
+	z-index: 1; /* Fix 401 */
+}
+
+.noUi-horizontal {
+	height: 1px;
+	width: 122px;
+	margin-top: 10px;
+	margin-bottom: 15px;
+	left: 9px;
+}
+
+.noUi-handle {
+	width: 20px;
+	height: 20px;
+	left: -10px;
+	top: -10px;
+	position: relative;
+	z-index: 10;
+}
+
+.noUi-background {
+	background: white;
+}
+
+.noUi-target {
+	border-radius: 0px;
+	border: 1px solid #777;
+	position: relative;
+	direction: ltr;
+}
+
+.noUi-handle {
+	border: 1px solid #777;
+	background: #eee;
+	cursor: default;
+	transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -webkit-transition: all 0.3s ease 0s;
+}
+.noUi-active {
+	 background: #444;
+}
