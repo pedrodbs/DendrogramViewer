@@ -1,1 +1,3 @@
 VSSolution/_ReSharper.Caches/
+*.suo
+VSSolution/.vs/

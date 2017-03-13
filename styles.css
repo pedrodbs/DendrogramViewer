@@ -2,15 +2,17 @@
 *{
     font-size: 3px;
     font-family: Helvetica;
-    font-weight: 350;
+    font-weight: 300;
     color: red;
-    stroke-width: 0px;
+    stroke-width: 0;
 }
 
 /* Global rules for all elements */
 .options-box-value,
 .options-title,
 .options-box,
+.options-select,
+.options-select option,
 .chkbox-box,
 .jscolor
 {
@@ -50,6 +52,14 @@ table td {
     float: right;    
 }
 
+.options-select {
+    width: 140px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-style: italic;
+}
+
 .options-title{
     font-weight:bold;
     text-align: left;
@@ -60,6 +70,12 @@ table td {
     margin-top : 10px;
     margin-bottom : 10px;
     text-align: left;
+}
+
+#pick-color-btn {
+    border: 1px solid #777;
+    width: 140px;
+    margin-bottom: 5px;
 }
 
 .options-line { 
@@ -77,15 +93,17 @@ input[type="checkbox"] {
 }
 
 input[type="checkbox"] + label {
-	background-color: #eee;
+    background-color: #eee;
 	border: 1px solid #777;
 	padding: 10px;
 	display: inline-block;
 	position: relative;
 	content: " ";
-	transition: all 0.3s ease 0s;
-    -moz-transition: all 0.3s ease 0s;
-    -webkit-transition: all 0.3s ease 0s;
+    -ms-transition: all 0.3s ease 0;
+    -o-transition: all 0.3s ease 0;
+    -moz-transition: all 0.3s ease 0;
+    -webkit-transition: all 0.3s ease 0;
+    transition: all 0.3s ease 0;
 }
 
 input[type="checkbox"]:hover + label {
@@ -129,9 +147,11 @@ input[type=button] {
     padding: 0px 10px;
     text-transform: none;
     text-align: center;
-    transition: all 0.3s ease 0s;
-    -moz-transition: all 0.3s ease 0s;
-    -webkit-transition: all 0.3s ease 0s;
+    -ms-transition: all 0.3s ease 0;
+    -o-transition: all 0.3s ease 0;
+    -moz-transition: all 0.3s ease 0;
+    -webkit-transition: all 0.3s ease 0;
+    transition: all 0.3s ease 0;
 }
 
 input[type=button]:hover {
@@ -227,20 +247,23 @@ line {
 }
 
 .noUi-target {
-	border-radius: 0px;
+	border-radius: 0;
 	border: 1px solid #777;
 	position: relative;
 	direction: ltr;
 }
 
 .noUi-handle {
-	border: 1px solid #777;
+    border: 1px solid #777;
 	background: #eee;
 	cursor: default;
-	transition: all 0.3s ease 0s;
-    -moz-transition: all 0.3s ease 0s;
-    -webkit-transition: all 0.3s ease 0s;
+    -ms-transition: all 0.3s ease 0;
+    -o-transition: all 0.3s ease 0;
+    -moz-transition: all 0.3s ease 0;
+    -webkit-transition: all 0.3s ease 0;
+    transition: all 0.3s ease 0;
 }
+
 .noUi-active {
 	 background: #444;
 }

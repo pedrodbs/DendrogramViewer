@@ -39,11 +39,31 @@ var invDistScale, distScale;                    // the node distance scale (x or
 // ======================
 
 var grayscale = false,                          // whether link line colors appear in grayscale
-    strokeColor = "#bbb",                       // default link line stroke color
+    strokeColor = "bbb",                        // default link line stroke color
     labelColor = "black",                       // color of labels (auto-updated)
     numClusterLeafs = 0,                        // num. clusters leafs, i.e., of size 1
     clusterColorIdx = 0,                        // used to get color palette index
-    clusterColors = window.fancyDarkColors;        // clusters color palette
+    clusterColors;                              // clusters color palette (updated according to selected option)
+
+// ======================
+// Color palettes
+// ======================
+
+// select options 
+var colorPaletteOptions = {
+    "tol-rainbow": "Tol's Rainbow",
+    "tol": "Tol's Qualitative",
+    "tol-dv": "Tol's Diverging",
+    "cb-Blues": "ColorBrewer Blues",
+    "cb-Greens": "ColorBrewer Greens",
+    "cb-Reds": "ColorBrewer Reds",
+    "cb-Accent": "ColorBrewer Accent",
+    "cb-Pastel1": "ColorBrewer Pastel1",
+    "cb-Set3": "ColorBrewer Set3",
+    "cb-Paired": "ColorBrewer Paired",
+    "rainbow": "HSV Rainbow",
+    "sol-base": "Solarized Base"
+};
 
 
 // ======================

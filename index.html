@@ -20,22 +20,27 @@
                 </div>
             </div>
             <div class="chkbox-box">
-                Grayscale:
-                <div style="float:right">
-                    <input id="grayscale-chkbox" type="checkbox" onclick="update()">
-                    <label for="grayscale-chkbox"></label>
-                </div>
-            </div>
-            <div class="chkbox-box">
                 Straight links:
                 <div style="float:right">
                     <input id="straight-chkbox" type="checkbox" checked onclick="update()">
                     <label for="straight-chkbox"></label>
                 </div>
             </div>
+            <div class="chkbox-box">
+                Grayscale:
+                <div style="float:right">
+                    <input id="grayscale-chkbox" type="checkbox" onclick="update()">
+                    <label for="grayscale-chkbox"></label>
+                </div>
+            </div>
+            <div class="options-box">
+                Color scheme:
+                <select id="color-scheme-select" class="options-select" onchange="if (this.selectedIndex) update();"></select>
+            </div>
+
             <div class="options-box">
                 <input id="color-picker" type="hidden" onchange="update()" value="none">
-                <button id="pick-color-btn" class="jscolor {valueElement: 'color-picker'}" style="border:1px solid #777; width:140px; margin-bottom:5px">
+                <button id="pick-color-btn" class="jscolor {valueElement: 'color-picker'}" >
                     Back color
                 </button>
             </div>
@@ -57,7 +62,7 @@
             </div>
             <div id="slider-update"></div>
             <hr class="options-line" />
-            <input class="options-box" id="save-button" type="button" value="Download" onclick="saveImage()" />
+            <input class="options-box" id="save-button" type="button" value="Download SVG" onclick="saveImage()" />
         </td>
         <td id="container-column">
             <div id="container"></div>
@@ -69,7 +74,7 @@
 <script src="scripts/utilFunctions.js"></script>
 <script src="scripts/nouislider.min.js"></script>
 <script src="scripts/jscolor.min.js"></script>
-<script src="scripts/colorPalettes.js"></script>
+<script src="scripts/palette.js"></script>
 <script src="scripts/variables.js"></script>
 <script src="scripts/drag-zoom.js"></script>
 <script src="scripts/svg-crowbar-2.js"></script>

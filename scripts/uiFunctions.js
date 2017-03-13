@@ -33,6 +33,12 @@
     window.scaleLine = window.scaleSvg.append("line")
         .attr("id", "scaleLine");
 
+    // adds color options to select
+    var select = document.getElementById("color-scheme-select");
+    for (var key in window.colorPaletteOptions) {
+        select.options[select.options.length] = new Option(window.colorPaletteOptions[key], key);
+    }
+
     //reads data and initializes cluster
     readData();
 }
@@ -62,6 +68,11 @@ function updateVariables() {
     window.straightLinks = document.getElementById("straight-chkbox").checked;
     window.zoomDragable = document.getElementById("zoom-chkbox").checked;
     window.labelColor = document.getElementById("pick-color-btn").style.color;
+
+    // reads selected palette
+    var select = document.getElementById("color-scheme-select");
+    var selectedPalette = select.options[select.selectedIndex].value;
+    window.clusterColors = palette(selectedPalette, window.numClusterLeafs).reverse();
 }
 
 function updatePageElements() {
@@ -97,7 +108,7 @@ function readData() {
         window.numClusterLeafs = 0;
         getChildrenData(clusterJsonObj);
 
-        // gets min and max dissimilarity/y
+        // gets min and max dissimilarity/distance
         window.cluster.nodes(window.root).forEach(function (nd) {
             if (!isNull(nd.d)) {
                 nd.y = nd.d;
@@ -114,8 +125,6 @@ function readData() {
 
         //adds the value slider
         var updateSlider = document.getElementById("slider-update");
-        var updateSliderValue = document.getElementById("slider-update-value");
-
         noUiSlider.create(updateSlider,
         {
             range: { 'min': 0, 'max': 1 },
@@ -123,16 +132,8 @@ function readData() {
             step: 0.05
         });
 
-        updateSlider.noUiSlider.on("update",
-            function (values, handle) {
-                //updates text and global variable
-                var value = window.dMin + ((window.dMax - window.dMin) * values[handle]);
-                updateSliderValue.innerHTML = value.toFixed(1);
-                window.clusterDistThreshold = value;
-                update();
-            });
-
-        updateSliderValue.innerHTML = window.dMax.toFixed(1);
+        updateSlider.noUiSlider.on("update", window.updateSlider);
+        document.getElementById("slider-update-value").innerHTML = window.dMax.toFixed(1);
     });
 }
 
@@ -172,6 +173,34 @@ function updateNodeColor(node, color, changeColor) {
         }
     }
 }
+
+function updateSlider(values, handle) {
+    //updates text and threshold variable
+    var value = window.dMin + ((window.dMax - window.dMin) * values[handle]);
+    document.getElementById("slider-update-value").innerHTML = value.toFixed(1);
+    window.clusterDistThreshold = value;
+
+    // updates visual elements
+    update();
+}
+
+function getColor(colorValue) {
+    return "#" + (window.grayscale ? getGrayscale(colorValue) : colorValue);
+}
+
+function getGrayscale(colorValue) {
+    var c = parseInt(colorValue, 16);
+    var func = function(r, g, b) {
+        g = 0.2126 * r + 0.7152 * g + 0.0722 * b;
+        return [g, g, g];
+    };
+    return func(c >> 16, (c >> 8) & 255, c & 255).map(function(v) {
+        v = Math.floor(v);
+        v = Number(v > 0 ? (v < 255 ? v : 255) : 0).toString(16);
+        return v.length === 1 ? "0" + v : v;
+    }).join("");
+}
+
 
 function updateDendrogram() {
 
@@ -222,7 +251,7 @@ function updateDendrogram() {
         .data(window.links)
         .enter().append("path")
         .attr("class", "link")
-        .attr("stroke", function(d) { return window.grayscale ? window.strokeColor : d.target.color; })
+        .attr("stroke", function (d) { return getColor(d.target.color); })
         .attr("d", window.diagonal);
 
     // sets node data and translate nodes
@@ -242,8 +271,8 @@ function updateDendrogram() {
 
     // adds node's circle
     node.append("circle")
-        .attr("stroke", function (d) { return window.grayscale ? window.strokeColor : d.color; })
-        .style("fill", function (d) { return window.grayscale ? window.strokeColor : d.color; })
+        .attr("stroke", function (d) { return getColor(d.color); })
+        .style("fill", function (d) { return getColor(d.color); })
         .attr("r", window.nodeRadius);
 
     // positions label according to vertical layout and nodes' num. children
