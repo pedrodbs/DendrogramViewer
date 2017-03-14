@@ -6,14 +6,25 @@ var fileName = !isNullOrEmptyOrWhiteSpaces(fileNameParam) ? fileNameParam : "dat
 
 
 // ======================
-// D3 cluster algorithm objects
+// D3 cluster algorithm objects and svg elements
 // ======================
-var root,                                       // cluster root node
-    cluster,                                    // the cluster tree algorithm
-    diagonal;                                   // tree diagonal (for children link plotting)
+var root, // cluster root node
+    cluster;                                    // the cluster tree algorithm
+
+var topSvg,                                     // d3 main svg
+    svg,                                        // d3 svg to contain all elements, including cluster tree
+    backgRect,                                  // d3 background rectangle
+    threshLine,                                 // d3 threshold line
+    scaleSvg, scaleLine;                        // d3 elements for scale axis
 
 var nodes, links;                               //the tree structure itself (nodes and links)
 
+// ======================
+// Update variables
+// ======================
+var updateColors = true;
+var updatePositions = true;
+var updateLinks = true;
 
 // ======================
 // Layout variables
@@ -21,11 +32,15 @@ var nodes, links;                               //the tree structure itself (nod
 
 var width, height;                              // dendrogram window dimensions (auto updated)
 
-var vertLayout = true,                          // whether to display the tree horizontally or vertically
+var showLabels = false,                         // whether to show the nodes' labels
+    vertLayout = true,                          // whether to display the tree horizontally or vertically
     straightLinks = false,                      // whether to draw straight links in tree
     clusterDistThreshold = 0,                   // the threshold for cluster dissimilarity/distance 
-    nodeRadius = 4,                             // radius of node
+    numThresholdClusters = 0,                   // num. clusters under the threshold
+    numClusterLeafs = 0,                        // num. clusters leafs, i.e., of size 1
+    nodeRadius = 2,                             // radius of node
     numScaleTicks = 5,                          // num. of ticks for the scale axis
+    numRangeSteps = 50,                         // num. of step values of the range sliders
     treeMargin = 100;                           // the margin (to the window) used to draw the dendrogram tree
 
 var dMax = Number.MIN_VALUE;                    // dissimilarity variables
@@ -33,6 +48,8 @@ var dMin = Number.MAX_VALUE;
 
 var invDistScale, distScale;                    // the node distance scale (x or y axis) functions
 
+var minZoom = 1,                                // the minimum zoom scale
+    maxZoomFactor = 20;                         // the ratio factor as the number num. leaf clusters
 
 // ======================
 // Coloring variables
@@ -41,7 +58,6 @@ var invDistScale, distScale;                    // the node distance scale (x or
 var grayscale = false,                          // whether link line colors appear in grayscale
     strokeColor = "bbb",                        // default link line stroke color
     labelColor = "black",                       // color of labels (auto-updated)
-    numClusterLeafs = 0,                        // num. clusters leafs, i.e., of size 1
     clusterColorIdx = 0,                        // used to get color palette index
     clusterColors;                              // clusters color palette (updated according to selected option)
 
@@ -64,13 +80,3 @@ var colorPaletteOptions = {
     "rainbow": "HSV Rainbow",
     "sol-base": "Solarized Base"
 };
-
-
-// ======================
-// Svg
-// ======================
-var topSvg,                                     // d3 main svg
-    svg,                                        // d3 svg for d3 tree layout
-    backgRect,                                  // d3 background rectangle
-    threshLine,                                 // d3 threshold line
-    scaleSvg, scaleLine;                        // d3 elements for scale axis

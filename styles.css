@@ -1,5 +1,5 @@
 ﻿/* putting "wrong" style to all elements that we want to personalize and save with the svg*/
-*{
+* {
     font-size: 3px;
     font-family: Helvetica;
     font-weight: 300;
@@ -8,14 +8,14 @@
 }
 
 /* Global rules for all elements */
+
 .options-box-value,
 .options-title,
 .options-box,
 .options-select,
 .options-select option,
 .chkbox-box,
-.jscolor
-{
+.jscolor {
     font-size: 14px;
     font-family: Candara;
     font-weight: normal;
@@ -23,10 +23,14 @@
     color: black;
 }
 
-table { border: none; border-collapse: collapse; }
+table {
+    border: none;
+    border-collapse: collapse;
+}
+
 table td {
-	 border: 1px solid #777;  
-	 vertical-align: top;
+    border: 1px solid #777;
+    vertical-align: top;
 }
 
 #container {
@@ -41,44 +45,51 @@ table td {
 .options-box,
 .options-line,
 .chkbox-box {
-    margin-top : 10px;
-    margin-bottom : 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     margin-left: 10px;
     margin-right: 10px;
 }
 
-.options-box-value
-{
-    float: right;    
-}
+.options-box-value { float: right; }
 
 .options-select {
+    background: #eee;
+    border: 1px solid #777;
     width: 140px;
     margin-top: 5px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     font-size: 14px;
     font-style: italic;
 }
 
-.options-title{
-    font-weight:bold;
+.options-select option:checked { box-shadow: 0 0 10px 100px #444 inset; }
+
+.options-title {
+    font-weight: bold;
     text-align: left;
-    margin-bottom : 10px;
+    margin-bottom: 10px;
 }
 
-.chkbox-box{
-    margin-top : 10px;
-    margin-bottom : 10px;
+.chkbox-box {
+    margin-top: 10px;
+    margin-bottom: 10px;
     text-align: left;
 }
 
 #pick-color-btn {
     border: 1px solid #777;
-    width: 140px;
-    margin-bottom: 5px;
+    width: 10px;
+    height: 10px;
+    padding: 10px;
 }
 
-.options-line { 
+#pick-color-btn:hover {
+    background: #444;
+    color: white;
+}
+
+.options-line {
     background-color: #777;
     height: 1px;
     border: 0 none;
@@ -86,19 +97,187 @@ table td {
     margin-top: 20px;
 }
 
+/* 
+ * ==========================================================================
+ *    Custom range slider, based on styling from:
+ *    https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/
+ * ========================================================================== 
+*/
+
+/**
+ * Range slider style
+ */
+
+input[type=range] {
+    -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+    width: 140px; /* Specific width is required for Firefox. */
+    background: transparent; /* Otherwise white in Chrome */
+    margin-top: -5px;
+    margin-bottom: 0;
+}
+
+input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; }
+
+input[type=range]:focus {
+    outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+
+input[type=range]::-ms-track {
+    width: 140px;
+    cursor: pointer;
+
+    /* Hides the slider so custom styles can be added */
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+}
+
+/**
+ * Range thumb style
+ */
+
+/* Special styling for WebKit/Blink */
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: 1px solid #777;
+    width: 20px;
+    height: 20px;
+    border-radius: 0;
+    background-color: #eee;
+    cursor: pointer;
+    margin-top: -14px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+}
+
+input[type=range]:hover::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: 1px solid #777;
+    width: 20px;
+    height: 20px;
+    border-radius: 0;
+    background-color: #444;
+    cursor: pointer;
+    margin-top: -14px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+}
+
+/* All the same stuff for Firefox */
+
+input[type=range]::-moz-range-thumb {
+    border: 1px solid #777;
+    width: 20px;
+    height: 20px;
+    border-radius: 0;
+    background-color: #eee;
+    cursor: pointer;
+}
+
+input[type=range]:hover::-moz-range-thumb {
+    border: 1px solid #777;
+    width: 20px;
+    height: 20px;
+    border-radius: 0;
+    background-color: #444;
+    cursor: pointer;
+}
+
+/* All the same stuff for IE */
+
+input[type=range]::-ms-thumb {
+    border: 1px solid #777;
+    width: 20px;
+    height: 20px;
+    border-radius: 0;
+    background-color: #eee;
+    cursor: pointer;
+}
+
+input[type=range]:hover::-ms-thumb {
+    border: 1px solid #777;
+    width: 20px;
+    height: 20px;
+    border-radius: 0;
+    background-color: #444;
+    cursor: pointer;
+}
+
+/**
+ * Range track style
+ */
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 120px;
+    height: 2px;
+    cursor: pointer;
+    background: white;
+    border-radius: 0;
+    border: 1px solid #777;
+}
+
+input[type=range]:focus {
+    border: 1px dashed #777;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {  background: #444; }
+
+input[type=range]::-moz-range-track {
+    width: 120px;
+    height: 2px;
+    cursor: pointer;
+    background: white;
+    border-radius: 0;
+    border: 1px solid #777;
+}
+
+input[type=range]::-ms-track {
+    width: 120px;
+    height: 2px;
+    cursor: pointer;
+    background: white;
+    border-radius: 0;
+    border-color: transparent;
+    color: transparent;
+}
+
+input[type=range]::-ms-fill-lower {
+    background: white;
+    border: 1px solid #777;
+    border-radius: 0;
+}
+
+input[type=range]:focus::-ms-fill-lower {
+    background: #444;
+}
+
+input[type=range]::-ms-fill-upper {
+    background: #444;
+    border: 1px solid #777;
+    border-radius: 0;
+}
+
+input[type=range]:focus::-ms-fill-upper {
+    background: #444;
+}
+
+
+/* 
+ * ==========================================================================
+ *    Custom checkbox
+ * ========================================================================== 
+*/
+
 input[type="checkbox"] {
-	display: none;
-	-webkit-appearance: none;
-	-moz-appearance:none;
+    display: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
 }
 
 input[type="checkbox"] + label {
     background-color: #eee;
-	border: 1px solid #777;
-	padding: 10px;
-	display: inline-block;
-	position: relative;
-	content: " ";
+    border: 1px solid #777;
+    padding: 10px;
+    display: inline-block;
+    position: relative;
+    content: " ";
     -ms-transition: all 0.3s ease 0;
     -o-transition: all 0.3s ease 0;
     -moz-transition: all 0.3s ease 0;
@@ -107,30 +286,28 @@ input[type="checkbox"] + label {
 }
 
 input[type="checkbox"]:hover + label {
-	background-color: #444;
-	color: white;
+    background-color: #444;
+    color: white;
 }
 
 input[type="checkbox"]:hover + label:after {
-	content: '\2714';
-	font-size: 15px;
-	position: absolute;
-	top: -2px;
-	left: 4px;
-	color: white;
+    content: '\2714';
+    font-size: 15px;
+    position: absolute;
+    top: -2px;
+    left: 4px;
+    color: white;
 }
 
-input[type="checkbox"]:checked + label {
-	color: #000;
-}
+input[type="checkbox"]:checked + label { color: #000; }
 
 input[type="checkbox"]:checked + label:after {
-	content: '\2714';
-	font-size: 15px;
-	position: absolute;
-	top: -2px;
-	left: 4px;
-	color: #000;
+    content: '\2714';
+    font-size: 15px;
+    position: absolute;
+    top: -2px;
+    left: 4px;
+    color: #000;
 }
 
 input[type=button] {
@@ -159,10 +336,14 @@ input[type=button]:hover {
     color: white;
 }
 
-/* Tree styles */
-.node {
-    cursor: pointer;
-}
+
+/* 
+ * ==========================================================================
+ *    D3 Tree styles
+ * ========================================================================== 
+*/
+
+.node { cursor: pointer; }
 
 .node circle {
     fill: #fff;
@@ -170,7 +351,7 @@ input[type=button]:hover {
 }
 
 .node text {
-    font-size: 14px;
+    /*font-size: 14px;*/
     font-family: Candara;
     font-weight: normal;
 }
@@ -181,9 +362,8 @@ input[type=button]:hover {
 }
 
 /* Scale styles */
-line {
-    stroke-width: 1px;
-}
+
+line { stroke-width: 1px; }
 
 .threshLine {
     stroke-width: 1px;
@@ -195,75 +375,4 @@ line {
     font-size: 16px;
     font-family: Candara;
     font-weight: bold;
-}
-
-/* Numeric slider styles */
-.noUi-target,
-.noUi-target * {
-	-webkit-touch-callout: none;
-	-webkit-user-select: none;
-	-ms-touch-action: none;
-		touch-action: none;	
-	-ms-user-select: none;
-	-moz-user-select: none;
-}
-
-.noUi-origin {
-	position: absolute;
-	right: 0;
-	top: 0;
-	left: 0;
-	bottom: 0;
-}
-
-.noUi-base {
-	-webkit-transform: translate3d(0,0,0);
-	transform: translate3d(0,0,0);
-	width: 100%;
-	height: 100%;
-	position: relative;
-	z-index: 1; /* Fix 401 */
-}
-
-.noUi-horizontal {
-	height: 1px;
-	width: 122px;
-	margin-top: 10px;
-	margin-bottom: 15px;
-	left: 9px;
-}
-
-.noUi-handle {
-	width: 20px;
-	height: 20px;
-	left: -10px;
-	top: -10px;
-	position: relative;
-	z-index: 10;
-}
-
-.noUi-background {
-	background: white;
-}
-
-.noUi-target {
-	border-radius: 0;
-	border: 1px solid #777;
-	position: relative;
-	direction: ltr;
-}
-
-.noUi-handle {
-    border: 1px solid #777;
-	background: #eee;
-	cursor: default;
-    -ms-transition: all 0.3s ease 0;
-    -o-transition: all 0.3s ease 0;
-    -moz-transition: all 0.3s ease 0;
-    -webkit-transition: all 0.3s ease 0;
-    transition: all 0.3s ease 0;
-}
-
-.noUi-active {
-	 background: #444;
 }

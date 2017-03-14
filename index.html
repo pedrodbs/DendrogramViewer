@@ -11,58 +11,85 @@
 <table id="ui-table">
     <tr>
         <td id="options-column">
+            
+            <!-- **** Visual options **** -->
             <p class="options-title">Visual options:</p>
             <div class="chkbox-box">
+                Show labels:
+                <div style="float: right">
+                    <input id="labels-chkbox" type="checkbox" unchecked onclick="onShowLabels()">
+                    <label for="labels-chkbox"></label>
+                </div>
+            </div>
+            <div class="chkbox-box">
                 Vertical layout:
-                <div style="float:right">
-                    <input id="vert-layout-chkbox" type="checkbox" checked onclick="update()">
+                <div style="float: right">
+                    <input id="vert-layout-chkbox" type="checkbox" checked onclick="onVertLayout()">
                     <label for="vert-layout-chkbox"></label>
                 </div>
             </div>
             <div class="chkbox-box">
                 Straight links:
-                <div style="float:right">
-                    <input id="straight-chkbox" type="checkbox" checked onclick="update()">
+                <div style="float: right">
+                    <input id="straight-chkbox" type="checkbox" checked onclick="onStraightLinks()">
                     <label for="straight-chkbox"></label>
                 </div>
             </div>
             <div class="chkbox-box">
                 Grayscale:
-                <div style="float:right">
-                    <input id="grayscale-chkbox" type="checkbox" onclick="update()">
+                <div style="float: right">
+                    <input id="grayscale-chkbox" type="checkbox" onclick="onGrayscale()">
                     <label for="grayscale-chkbox"></label>
+                </div>
+            </div>
+            <div class="chkbox-box">
+                Background color:
+                <div style="float: right">
+                    <input id="color-picker" type="hidden" onchange="onColorSchemeChanged()" value="none">
+                    <input id="pick-color-btn" type="button" class="jscolor {valueElement: 'color-picker'}">
+                    <label for="pick-color-btn"></label>
                 </div>
             </div>
             <div class="options-box">
                 Color scheme:
-                <select id="color-scheme-select" class="options-select" onchange="if (this.selectedIndex) update();"></select>
+                <select id="color-scheme-select" class="options-select" onchange="onColorSchemeChanged();"></select>
             </div>
 
-            <div class="options-box">
-                <input id="color-picker" type="hidden" onchange="update()" value="none">
-                <button id="pick-color-btn" class="jscolor {valueElement: 'color-picker'}" >
-                    Back color
-                </button>
-            </div>
-            <hr class="options-line" />
+            <hr class="options-line"/>
+
+            <!-- **** Interaction options **** -->
             <p class="options-title">Interaction options:</p>
             <div class="chkbox-box">
                 Zoom & drag:
-                <div style="float:right">
+                <div style="float: right">
                     <input id="zoom-chkbox" type="checkbox" onclick="update()">
                     <label for="zoom-chkbox"></label>
                 </div>
             </div>
-            <input class="options-box" id="center-button" type="button" value="Reset view" onclick="resetDragZoom()" />
-            <hr class="options-line" />
+            <input class="options-box" id="center-button" type="button" value="Reset view" onclick="resetDragZoom()"/>
+
+            <hr class="options-line"/>
+
+            <!-- **** Dendrogram options **** -->
             <p class="options-title">Dendrogram options:</p>
-            <div class="options-box" style="margin-bottom: 15px;">
-                Dist. threshold:
-                <div class="options-box-value" id="slider-update-value">0</div>
+            <div class="options-box">
+                Num. clusters:
+                <div class="options-box-value" id="num-clusters-slider-value">0</div>
             </div>
-            <div id="slider-update"></div>
-            <hr class="options-line" />
-            <input class="options-box" id="save-button" type="button" value="Download SVG" onclick="saveImage()" />
+            <input class="options-box" id="num-clusters-slider" type="range"
+                   oninput="onNumClustersChanged(this.value)" onchange="onNumClustersChanged(this.value)"/>
+
+            <div class="options-box">
+                Dist. threshold:
+                <div class="options-box-value" id="threshold-slider-value">0</div>
+            </div>
+            <input class="options-box" id="threshold-slider" type="range"
+                   oninput="onThresholdChanged(this.value)" onchange="onThresholdChanged(this.value)"/>
+
+            <!-- **** Buttons **** -->
+            <hr class="options-line"/>
+            <input class="options-box" id="save-button" type="button" value="Download SVG" onclick="saveImage()"/>
+
         </td>
         <td id="container-column">
             <div id="container"></div>
@@ -72,11 +99,9 @@
 
 <script src="scripts/d3.v3.min.js"></script>
 <script src="scripts/utilFunctions.js"></script>
-<script src="scripts/nouislider.min.js"></script>
 <script src="scripts/jscolor.min.js"></script>
 <script src="scripts/palette.js"></script>
 <script src="scripts/variables.js"></script>
-<script src="scripts/drag-zoom.js"></script>
 <script src="scripts/svg-crowbar-2.js"></script>
 <script src="scripts/svgUtilFunctions.js"></script>
 <script src="scripts/uiFunctions.js"></script>
