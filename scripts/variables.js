@@ -8,7 +8,7 @@ var fileName = !isNullOrEmptyOrWhiteSpaces(fileNameParam) ? fileNameParam : "dat
 // ======================
 // D3 cluster algorithm objects and svg elements
 // ======================
-var root, // cluster root node
+var root,                                       // cluster root node
     cluster;                                    // the cluster tree algorithm
 
 var topSvg,                                     // d3 main svg

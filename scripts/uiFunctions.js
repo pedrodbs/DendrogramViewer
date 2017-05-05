@@ -5,11 +5,11 @@
 
 function initUI() {
 
-    //creates d3 cluster layout
+    // creates d3 cluster layout
     window.cluster = d3.layout.cluster()
         .size([window.height, window.width - 2 * window.treeMargin]);
 
-    //adds main svg
+    // adds main svg
     window.topSvg = d3.select("#container").append("svg")
         .attr("id", "topSvg");
 
