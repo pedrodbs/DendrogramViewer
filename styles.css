@@ -1,14 +1,62 @@
-﻿/* putting "wrong" style to all elements that we want to personalize and save with the svg*/
+﻿/* 
+ * ==========================================================================
+ *    FONT DEFINITIONS
+ * ========================================================================== 
+*/
+
+@font-face {
+	font-family: Candara;  
+	src: local('Candara'), url("fonts/Candara/Candara.ttf") format('truetype');  
+	font-weight: normal;  
+}
+
+@font-face {
+	font-family: Candara;  
+	src: local('Candara Italic'), url("fonts/Candara/Candara Italic.ttf") format('truetype');  
+	font-weight: normal;  
+  font-style: italic;
+}
+
+@font-face {
+	font-family: Candara;  
+	src: local('Candara Italic'), url("fonts/Candara/Candara Italic.ttf") format('truetype');  
+  font-style: italic;
+	font-weight: normal;  
+}
+
+@font-face {
+	font-family: Candara;  
+	src: local('Candara Bold Italic'), url("fonts/Candara/Candara Bold Italic.ttf") format('truetype');  
+  font-style: italic;
+	font-weight: bold;  
+}
+
+@font-face {
+	font-family: Candara;  
+	src: local('Candara Bold'), url("fonts/Candara/Candara Bold.ttf") format('truetype');  
+  font-style: normal;
+	font-weight: bold;  
+}
+
+
+/* 
+ * ==========================================================================
+ *    Putting "wrong" style to all elements that we want to personalize and save with the svg
+ * ========================================================================== 
+*/
 * {
     font-size: 3px;
-    font-family: Helvetica;
+    font-family: Candara;
     font-weight: 300;
     color: red;
     stroke-width: 0;
 }
 
-/* Global rules for all elements */
-
+/* 
+ * ==========================================================================
+ *    Global rules for all elements
+ * ========================================================================== 
+*/
 .options-box-value,
 .options-title,
 .options-box,
