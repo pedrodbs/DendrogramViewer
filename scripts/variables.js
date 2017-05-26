@@ -80,3 +80,11 @@ var colorPaletteOptions = {
     "rainbow": "HSV Rainbow",
     "sol-base": "Solarized Base"
 };
+
+function resetVars(){
+    window.updateColors = true;
+    window.updatePositions = true;
+    window.updateLinks = true;
+    window.dMax = Number.MIN_VALUE;
+    window.dMin = Number.MAX_VALUE;
+}

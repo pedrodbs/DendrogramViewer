@@ -46,9 +46,11 @@
 */
 * {
     font-size: 3px;
-    font-family: Candara;
-    font-weight: 300;
+    font-family: Arial;
+    font-weight: 900;
     color: red;
+    fill: red;
+    stroke: red;
     stroke-width: 0;
 }
 
@@ -148,6 +150,8 @@ table td {
     margin-top: 20px;
     margin-top: 20px;
 }
+
+#load-file-btn { margin-top: 0; }
 
 /* 
  * ==========================================================================

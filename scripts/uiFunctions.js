@@ -1,7 +1,41 @@
-﻿/* 
-* Based on the code in:
-* http://www.meccanismocomplesso.org/en/dendrogramma-d3-parte1/
-*/
+﻿function loadFile(files) {
+    // checks file
+    if (files.length > 0) {
+        const file = files[0];
+        console.info(`Reading Json dendrogram data from file ${file.name}...`);
+        window.fileName = file.name;
+
+        // reads file as json
+        const reader = new FileReader();
+        reader.onload = function(event) {
+            // reads data and loads tree
+            const clusterJsonObj = JSON.parse(event.target.result);
+            window.readData(clusterJsonObj);
+            return true;
+        };
+        reader.readAsText(file);
+    }
+    return false;
+}
+
+function loadFromUrl() {
+    console.info(`Reading Json dendrogram data from file ${window.fileName}...`);
+    d3.json(window.fileName,
+        function(error, clusterJsonObj) {
+            if (error) {
+                console.error(error);
+                return false;
+            }
+
+            // reads root element from json
+            window.root = clusterJsonObj;
+
+            // reads data and loads dendrogram
+            window.readData(clusterJsonObj);
+
+            return true;
+        });
+}
 
 function initUI() {
 
@@ -22,7 +56,7 @@ function initUI() {
         .attr("id", "backgRect")
         .attr("width", "100%")
         .attr("height", "100%")
-        .attr("fill", "none");
+        .style("fill", "none");
     document.getElementById("color-picker").value = "FFF";
     document.getElementById("pick-color-btn").style.color = "black";
 
@@ -38,16 +72,16 @@ function initUI() {
         .attr("id", "scaleLine");
 
     // adds color options to select
-    var select = document.getElementById("color-scheme-select");
-    for (var key in window.colorPaletteOptions) {
+    const select = document.getElementById("color-scheme-select");
+    for (let key in window.colorPaletteOptions) {
         select.options[select.options.length] = new Option(window.colorPaletteOptions[key], key);
     }
 
-    //reads data and initializes cluster
-    readData();
+    //reads data and initializes graph
+    loadFromUrl();
 }
 
-window.onresize = function () {
+window.onresize = function() {
     window.updatePositions = true;
     window.updateLinks = true;
     window.update();
@@ -108,10 +142,10 @@ function onNumClustersChanged(value) {
 function onZoom() {
     // define the zoom function for the zoomable tree
     if (!window.zoomDragable) return;
-    var scale = d3.event.scale;
-    var dx = Math.max((1 - scale) * window.width, Math.min(0, d3.event.translate[0]));
-    var dy = Math.max((1 - scale) * window.height, Math.min(0, d3.event.translate[1]));
-    window.svg.attr("transform", "translate(" + dx + "," + dy + ")scale(" + scale + ")");
+    const scale = d3.event.scale;
+    const dx = Math.max((1 - scale) * window.width, Math.min(0, d3.event.translate[0]));
+    const dy = Math.max((1 - scale) * window.height, Math.min(0, d3.event.translate[1]));
+    window.svg.attr("transform", `translate(${dx},${dy})scale(${scale})`);
 }
 
 
@@ -129,8 +163,8 @@ function updateVariables() {
 function updatePageElements() {
 
     // calculates max dimensions
-    var windowDiscount = 20;
-    var optionsWidth = document.getElementById("save-button").offsetWidth + 20;
+    const windowDiscount = 20;
+    const optionsWidth = document.getElementById("save-button").offsetWidth + 20;
     window.width = window.innerWidth - optionsWidth - windowDiscount;
     window.height = window.innerHeight - windowDiscount;
 
@@ -145,7 +179,7 @@ function updatePageElements() {
     window.cluster.size(window.vertLayout
         ? [window.width - window.treeMargin, window.height]
         : [window.height - window.treeMargin, window.width]);
-    window.backgRect.style("fill", "#" + document.getElementById("color-picker").value);
+    window.backgRect.style("fill", `#${document.getElementById("color-picker").value}`);
 
     //updates threshold slider text and value
     document.getElementById("threshold-slider-value").innerHTML = window.clusterDistThreshold.toFixed(1);
@@ -157,8 +191,8 @@ function updatePageElements() {
     document.getElementById("num-clusters-slider").value = window.numThresholdClusters;
 
     // reads selected palette and create colors
-    var select = document.getElementById("color-scheme-select");
-    var selectedPalette = select.options[select.selectedIndex].value;
+    const select = document.getElementById("color-scheme-select");
+    const selectedPalette = select.options[select.selectedIndex].value;
     window.clusterColors = palette(selectedPalette, Math.max(1, window.numThresholdClusters)).reverse();
 }
 
@@ -169,7 +203,7 @@ function countThresholdNodes(node) {
         return 1;
     }
     var count = 0;
-    for (var j in node.children) {
+    for (let j in node.children) {
         count += countThresholdNodes(node.children[j]);
     }
     return count;
@@ -180,7 +214,7 @@ function getAllNodes(node, nodes) {
         return nodes;
     }
     nodes.push(node);
-    for (var j in node.children) {
+    for (let j in node.children) {
         getAllNodes(node.children[j], nodes);
     }
     return nodes;
@@ -191,19 +225,23 @@ function getThresholdFromNumClusters(numClusters) {
         return window.root.d;
     }
     // gets all nodes and sorts them by dissimilarity/distance, descendingly
-    var nodes = window.getAllNodes(window.root, []);
-    nodes.sort(function (n1, n2) { return n2.d - n1.d; });
+    const nodes = window.getAllNodes(window.root, []);
+    nodes.sort(function(n1, n2) { return n2.d - n1.d; });
     // gets distance right below the node's distance
-    return nodes[numClusters-2].d - 0.01;
+    return nodes[numClusters - 2].d - 0.01;
 }
 
-function readData() {
+function readData(clusterJsonObj) {
+    if (window.isNull(clusterJsonObj)) {
 
-    console.info("Reading Json graph data from file " + window.fileName + "...");
+        window.update();
+        return false;
+    } else {
 
-    d3.json(window.fileName, function (error, clusterJsonObj) {
-        
-        // reads root element from json
+        // resets variables
+        window.resetVars();
+
+        // sets root 
         window.root = clusterJsonObj;
 
         // reads children data
@@ -213,7 +251,7 @@ function readData() {
         // gets min and max dissimilarity/distance
         window.nodes = window.cluster.nodes(window.root);
         window.links = window.cluster.links(window.nodes);
-        window.nodes.forEach(function (nd) {
+        window.nodes.forEach(function(nd) {
             if (!isNull(nd.d)) {
                 nd.y = nd.d;
                 if (nd.d > window.dMax) window.dMax = nd.d;
@@ -222,11 +260,11 @@ function readData() {
         });
         window.clusterDistThreshold = window.dMax;
 
-        console.info("Dissimilarity in [" + window.dMin + "," + window.dMax + "]");
-        console.info("Num. cluster leafs: " + window.numClusterLeafs);
+        console.info(`Dissimilarity in [${window.dMin},${window.dMax}]`);
+        console.info(`Num. cluster leafs: ${window.numClusterLeafs}`);
 
         // changes title
-        document.title = "Clustering Dendrogram Visualizer - " + window.fileName;
+        document.title = `Clustering Dendrogram Visualizer - ${window.fileName}`;
 
         // changes sliders ranges
         document.getElementById("threshold-slider").min = window.dMin;
@@ -260,10 +298,12 @@ function readData() {
         node.append("circle")
             .attr("r", window.nodeRadius);
         node.append("text");
-        
+
         // updates visual elements
         update();
-    });
+
+        return true;
+    }
 }
 
 function getChildrenData(node) {
@@ -275,12 +315,12 @@ function getChildrenData(node) {
     if (!isNull(node.children)) {
 
         // iterate over children
-        for (var j in node.children) {
+        for (let j in node.children) {
             getChildrenData(node.children[j]);
         }
 
         // if no chilren, cluster is leaf
-        if(node.children.length === 0)
+        if (node.children.length === 0)
             window.numClusterLeafs++;
     }
 }
@@ -297,26 +337,26 @@ function updateNodeColor(node, color, changeColor) {
 
     // sets color of children recursively
     if (!isNull(node.children)) {
-        for (var j in node.children) {
+        for (let j in node.children) {
             updateNodeColor(node.children[j], color, changeColor);
         }
     }
 }
 
 function getColor(colorValue) {
-    return "#" + (window.grayscale ? getGrayscale(colorValue) : colorValue);
+    return `#${window.grayscale ? getGrayscale(colorValue) : colorValue}`;
 }
 
 function getGrayscale(colorValue) {
-    var c = parseInt(colorValue, 16);
-    var func = function(r, g, b) {
+    const c = parseInt(colorValue, 16);
+    const func = function(r, g, b) {
         g = 0.2126 * r + 0.7152 * g + 0.0722 * b;
         return [g, g, g];
     };
     return func(c >> 16, (c >> 8) & 255, c & 255).map(function(v) {
         v = Math.floor(v);
         v = Number(v > 0 ? (v < 255 ? v : 255) : 0).toString(16);
-        return v.length === 1 ? "0" + v : v;
+        return v.length === 1 ? `0${v}` : v;
     }).join("");
 }
 
@@ -328,27 +368,27 @@ function resetDragZoom() {
 function updateAllLinks() {
 
     if (!window.updateLinks) return;
-    
-    var thirdMargin = window.treeMargin / 3;
+
+    const thirdMargin = window.treeMargin / 3;
     var twoThirdMargin = thirdMargin * 2;
     var halfMargin = window.treeMargin / 2;
 
     // a line function for the tree's links
     var line = d3.svg.line()
-        .x(function (point) { return window.vertLayout ? (twoThirdMargin + point.lx) : (halfMargin + point.ly); })
-        .y(function (point) { return window.vertLayout ? (halfMargin + point.ly) : (twoThirdMargin + point.lx); });
+        .x(function(point) { return window.vertLayout ? (twoThirdMargin + point.lx) : (halfMargin + point.ly); })
+        .y(function(point) { return window.vertLayout ? (halfMargin + point.ly) : (twoThirdMargin + point.lx); });
 
     //creates tree diagonal (for children link plotting)
-    var diagonal = window.straightLinks
-        ? function (d) {
-            var points = [ // vertical layout, build dendrogram lines
+    const diagonal = window.straightLinks
+        ? function(d) {
+            const points = [// vertical layout, build dendrogram lines
                 { lx: d.source.x, ly: d.source.y },
                 { lx: d.target.x, ly: d.source.y },
                 { lx: d.target.x, ly: d.target.y }
             ];
             return line(points);
         }
-        : d3.svg.diagonal().projection(function (d) {
+        : d3.svg.diagonal().projection(function(d) {
             return window.vertLayout
                 ? [twoThirdMargin + d.x, halfMargin + d.y]
                 : [halfMargin + d.y, twoThirdMargin + d.x];
@@ -356,7 +396,7 @@ function updateAllLinks() {
 
     // updates links positions
     window.svg.selectAll(".link")
-            .attr("d", diagonal);
+        .attr("d", diagonal);
 
     window.updateLinks = false;
 }
@@ -377,7 +417,7 @@ function updateAllPositions() {
 
     // updates node's relative distances
     window.nodes = window.cluster.nodes(window.root);
-    window.nodes.forEach(function (nd) {
+    window.nodes.forEach(function(nd) {
         if (!isNull(nd.d)) {
             nd.y = window.vertLayout ? window.invDistScale(nd.d) : window.distScale(nd.d);
         }
@@ -390,20 +430,15 @@ function updateAllPositions() {
     window.svg.selectAll(".node")
         .attr("transform",
             function(d) {
-                return "translate(" +
-                    (window.vertLayout ? (twoThirdMargin + d.x) : (halfMargin + d.y)) +
-                    "," +
-                    (window.vertLayout ? (halfMargin + d.y) : (twoThirdMargin + d.x)) +
-                    ")";
+                return `translate(${window
+                    .vertLayout
+                    ? (twoThirdMargin + d.x)
+                    : (halfMargin + d.y)},${window.vertLayout ? (halfMargin + d.y) : (twoThirdMargin + d.x)})`;
             });
 
     // changes scale axis
     window.scaleSvg.attr("transform",
-        "translate(" +
-        (window.vertLayout ? thirdMargin : halfMargin) +
-        "," +
-        (window.vertLayout ? halfMargin : thirdMargin) +
-        ")");
+        `translate(${window.vertLayout ? thirdMargin : halfMargin},${window.vertLayout ? halfMargin : thirdMargin})`);
     window.scaleLine
         .attr("x1", vertLayout ? 0 : window.invDistScale(window.dMin))
         .attr("y1", vertLayout ? window.invDistScale(window.dMin) : 0)
@@ -416,11 +451,11 @@ function updateAllPositions() {
         .data(window.distScale.ticks(window.numScaleTicks))
         .enter().append("line")
         .attr("class", "ticks")
-        .attr("stroke", window.labelColor)
-        .attr("x1", function (d) { return vertLayout ? -tickShift : window.distScale(d); })
-        .attr("y1", function (d) { return vertLayout ? window.invDistScale(d) : -tickShift; })
-        .attr("x2", function (d) { return vertLayout ? tickShift : window.distScale(d); })
-        .attr("y2", function (d) { return vertLayout ? window.invDistScale(d) : tickShift; });
+        .style("stroke", window.labelColor)
+        .attr("x1", function(d) { return vertLayout ? -tickShift : window.distScale(d); })
+        .attr("y1", function(d) { return vertLayout ? window.invDistScale(d) : -tickShift; })
+        .attr("x2", function(d) { return vertLayout ? tickShift : window.distScale(d); })
+        .attr("y2", function(d) { return vertLayout ? window.invDistScale(d) : tickShift; });
 
     var scaleLabelShift = 5;
     window.scaleSvg.selectAll(".label").remove();
@@ -428,12 +463,12 @@ function updateAllPositions() {
         .data(window.distScale.ticks(window.numScaleTicks))
         .enter().append("text")
         .attr("class", "label")
-        .attr("fill", window.labelColor)
+        .style("fill", window.labelColor)
         .text(String)
-        .attr("x", function (d) { return window.vertLayout ? -2 * scaleLabelShift : window.distScale(d); })
-        .attr("y", function (d) { return window.vertLayout ? window.invDistScale(d) : -scaleLabelShift; })
-        .attr("text-anchor", vertLayout ? "end" : "middle")
-        .attr("dominant-baseline", vertLayout ? "middle" : "ideographic");
+        .attr("x", function(d) { return window.vertLayout ? -2 * scaleLabelShift : window.distScale(d); })
+        .attr("y", function(d) { return window.vertLayout ? window.invDistScale(d) : -scaleLabelShift; })
+        .style("text-anchor", vertLayout ? "end" : "middle")
+        .style("dominant-baseline", vertLayout ? "middle" : "ideographic");
 
     // updates threshold line
     window.updateThreshLine();
@@ -442,12 +477,12 @@ function updateAllPositions() {
 }
 
 function updateThreshLine() {
-    var thirdMargin = window.treeMargin / 3;
-    var halfMargin = window.treeMargin / 2;
+    const thirdMargin = window.treeMargin / 3;
+    const halfMargin = window.treeMargin / 2;
 
     // changes threshold indicative line
     window.threshLine
-        .attr("stroke", window.labelColor)
+        .style("stroke", window.labelColor)
         .attr("x1",
             vertLayout ? thirdMargin : halfMargin + window.distScale(window.clusterDistThreshold))
         .attr("y1",
@@ -466,23 +501,23 @@ function updateAllColors() {
     updateNodeColor(window.root, window.strokeColor, true);
 
     window.svg.selectAll(".link")
-        .attr("stroke", function(d) { return getColor(d.target.color); });
+        .style("stroke", function(d) { return getColor(d.target.color); });
 
     // adds node's circle
     window.svg.selectAll(".node")
         .select("circle")
-        .attr("stroke", function(d) { return getColor(d.color); })
-        .style("fill", function (d) { return getColor(d.color); });
+        .style("stroke", function(d) { return getColor(d.color); })
+        .style("fill", function(d) { return getColor(d.color); });
 
     // updates scale axis colors
     window.scaleLine
-        .attr("stroke", window.labelColor);
+        .style("stroke", window.labelColor);
 
     window.scaleSvg.selectAll(".ticks")
-        .attr("stroke", window.labelColor);
+        .style("stroke", window.labelColor);
 
     window.scaleSvg.selectAll(".label")
-        .attr("fill", window.labelColor);
+        .style("fill", window.labelColor);
 
     // updates threshold line
     window.updateThreshLine();
@@ -495,14 +530,14 @@ function updateAllLabels() {
     if (!window.showLabels) {
         window.svg.selectAll(".node")
             .select("text").text("");
-         return;
+        return;
     }
 
     // positions label according to vertical layout and nodes' num. children
     var labelShift = window.nodeRadius * 2;
     window.svg.selectAll(".node")
         .select("text")
-        .attr("fill", window.labelColor)
+        .style("fill", window.labelColor)
         .attr("dx",
             function(d) {
                 return (d.children ? labelShift : -labelShift);
@@ -511,8 +546,8 @@ function updateAllLabels() {
             function(d) {
                 return window.vertLayout ? (d.children ? -2 * labelShift : 0) : (d.children ? -labelShift : 0);
             })
-        .attr("transform", 
-            function (d) { return "rotate(" + (window.vertLayout && !d.children ? 290 : 0) + ")";})
+        .attr("transform",
+            function(d) { return `rotate(${window.vertLayout && !d.children ? 290 : 0})`; })
         .style("text-anchor",
             function(d) {
                 return (d.children ? "start" : "end");
@@ -522,12 +557,12 @@ function updateAllLabels() {
                 return window.vertLayout ? "central" : (d.children ? "alphabetic" : "middle");
             })
         .style("font-size", Math.max(3, (98 / window.numClusterLeafs)) + "px")
-        .text(function (d) { return d.n; });
+        .text(function(d) { return d.n; });
     console.info(98 / window.numClusterLeafs);
 }
 
 function updateDendrogram() {
-    
+
     window.updateAllPositions();
 
     window.updateAllLinks();

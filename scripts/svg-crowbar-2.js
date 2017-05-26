@@ -176,10 +176,11 @@ function getSvgInfo(svg, emptySvgDeclarationComputed)
         svg.setAttributeNS(prefix.xmlns, "xmlns:xlink", prefix.xlink);
     }
 
-    setInlineStyles(svg, emptySvgDeclarationComputed);
+    //setInlineStyles(svg, emptySvgDeclarationComputed);
         
     var doctype = '<?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">';
     var source = (new XMLSerializer()).serializeToString(svg);
+    var styles = "<?xml-stylesheet type=\"text/css\" href=\"styles.css\" ?>";
     var rect = svg.getBoundingClientRect();
     return {
         top: rect.top,
@@ -189,7 +190,8 @@ function getSvgInfo(svg, emptySvgDeclarationComputed)
         class: svg.getAttribute("class"),
         id: svg.getAttribute("id"),
         childElementCount: svg.childElementCount,
-        source: [doctype + source]};
+        source: [doctype + styles + source]
+    };
        
 }
 

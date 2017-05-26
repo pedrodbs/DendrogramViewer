@@ -12,6 +12,13 @@
     <tr>
         <td id="options-column">
             
+            <!-- **** File options **** -->
+            <p class="options-title">Tree file:</p>
+            <input id="input-file" type="file" accept=".json" onchange="loadFile(this.files)" style="display: none">
+            <input class="options-box" id="load-file-btn" type="button" value="Load..." onclick="document.getElementById('input-file').click();" />
+
+            <hr class="options-box" />
+
             <!-- **** Visual options **** -->
             <p class="options-title">Visual options:</p>
             <div class="chkbox-box">
