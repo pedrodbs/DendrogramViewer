@@ -1,9 +1,26 @@
 ﻿<!doctype html>
+<!--
+    This file is part of the DendrogramViewer project. 
+
+    Copyright (c) 2018 Pedro Sequeira (pedrodbs@gmail.com)
+ 
+    Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated
+    documentation files (the "Software"), to deal in the Software without restriction, including without limitation the
+    rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to
+    permit persons to whom the Software is furnished to do so, subject to the following conditions:
+ 
+    The above copyright notice and this permission notice shall be included in all copies or substantial portions of the
+    Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
+    WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS
+    OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+    OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+-->
 <meta charset="utf-8" />
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="styles.css">
-
     <title>Clustering Dendrogram Visualizer</title>
 </head>
 <body>
@@ -73,7 +90,7 @@
                     <label for="zoom-chkbox"></label>
                 </div>
             </div>
-            <input class="options-box" id="center-button" type="button" value="Reset view" onclick="resetDragZoom()"/>
+            <input class="options-box" id="center-button" type="button" value="Reset view" onclick="onResetDragZoom()"/>
 
             <hr class="options-line"/>
 
@@ -95,7 +112,7 @@
 
             <!-- **** Buttons **** -->
             <hr class="options-line"/>
-            <input class="options-box" id="save-button" type="button" value="Download SVG" onclick="saveImage()"/>
+            <input class="options-box" id="save-button" type="button" value="Download SVG" onclick="saveImage('innerSvg')"/>
 
         </td>
         <td id="container-column">
@@ -104,13 +121,12 @@
     </tr>
 </table>
 
-<script src="scripts/d3.v3.min.js"></script>
+<script src="../ext/d3.v3.min.js"></script>
 <script src="scripts/utilFunctions.js"></script>
-<script src="scripts/jscolor.min.js"></script>
-<script src="scripts/palette.js"></script>
+<script src="../ext/jscolor.js"></script>
+<script src="../ext/palette.js"></script>
 <script src="scripts/variables.js"></script>
-<script src="scripts/svg-crowbar-2.js"></script>
-<script src="scripts/svgUtilFunctions.js"></script>
+<script src="../ext/svg-crowbar-2.js"></script>
 <script src="scripts/uiFunctions.js"></script>
     
 

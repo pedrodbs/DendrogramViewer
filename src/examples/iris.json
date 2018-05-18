@@ -1,0 +1,1644 @@
+﻿{
+  "n": "(SET1;SET10;SET11;SET12;SET13;SET14;SET15;SET16;SET17;SET18;SET19;SET2;SET20;SET21;SET22;SET23;SET24;SET25;SET26;SET27;SET28;SET29;SET3;SET30;SET31;SET32;SET33;SET34;SET35;SET36;SET37;SET38;SET39;SET4;SET40;SET41;SET42;SET43;SET44;SET45;SET46;SET47;SET48;SET49;SET5;SET50;SET6;SET7;SET8;SET9;VER1;VER10;VER11;VER12;VER13;VER14;VER15;VER16;VER17;VER18;VER19;VER2;VER20;VER21;VER22;VER23;VER24;VER25;VER26;VER27;VER28;VER29;VER3;VER30;VER31;VER32;VER33;VER34;VER35;VER36;VER37;VER38;VER39;VER4;VER40;VER41;VER42;VER43;VER44;VER45;VER46;VER47;VER48;VER49;VER5;VER50;VER6;VER7;VER8;VER9;VRG1;VRG10;VRG11;VRG12;VRG13;VRG14;VRG15;VRG16;VRG17;VRG18;VRG19;VRG2;VRG20;VRG21;VRG22;VRG23;VRG24;VRG25;VRG26;VRG27;VRG28;VRG29;VRG3;VRG30;VRG31;VRG32;VRG33;VRG34;VRG35;VRG36;VRG37;VRG38;VRG39;VRG4;VRG40;VRG41;VRG42;VRG43;VRG44;VRG45;VRG46;VRG47;VRG48;VRG49;VRG5;VRG50;VRG6;VRG7;VRG8;VRG9)",
+  "d": 4.06,
+  "c": [
+    {
+      "n": "(VER1;VER10;VER11;VER12;VER13;VER14;VER15;VER16;VER17;VER18;VER19;VER2;VER20;VER21;VER22;VER23;VER24;VER25;VER26;VER27;VER28;VER29;VER3;VER30;VER31;VER32;VER33;VER34;VER35;VER36;VER37;VER38;VER39;VER4;VER40;VER41;VER42;VER43;VER44;VER45;VER46;VER47;VER48;VER49;VER5;VER50;VER6;VER7;VER8;VER9;VRG1;VRG10;VRG11;VRG12;VRG13;VRG14;VRG15;VRG16;VRG17;VRG18;VRG19;VRG2;VRG20;VRG21;VRG22;VRG23;VRG24;VRG25;VRG26;VRG27;VRG28;VRG29;VRG3;VRG30;VRG31;VRG32;VRG33;VRG34;VRG35;VRG36;VRG37;VRG38;VRG39;VRG4;VRG40;VRG41;VRG42;VRG43;VRG44;VRG45;VRG46;VRG47;VRG48;VRG49;VRG5;VRG50;VRG6;VRG7;VRG8;VRG9)",
+      "d": 1.96,
+      "c": [
+        {
+          "n": "(VER1;VER10;VER11;VER12;VER13;VER14;VER15;VER16;VER17;VER18;VER19;VER2;VER20;VER21;VER22;VER23;VER24;VER25;VER26;VER27;VER28;VER29;VER3;VER30;VER31;VER32;VER33;VER34;VER35;VER36;VER37;VER38;VER39;VER4;VER40;VER41;VER42;VER43;VER44;VER45;VER46;VER47;VER48;VER49;VER5;VER50;VER6;VER7;VER8;VER9;VRG14;VRG15;VRG2;VRG20;VRG22;VRG24;VRG27;VRG28;VRG34;VRG39;VRG43;VRG47;VRG50;VRG7)",
+          "d": 1.79,
+          "c": [
+            {
+              "n": "(VER1;VER10;VER12;VER13;VER14;VER15;VER16;VER17;VER18;VER19;VER2;VER20;VER21;VER22;VER23;VER24;VER25;VER26;VER27;VER28;VER29;VER3;VER30;VER31;VER32;VER33;VER34;VER35;VER36;VER37;VER38;VER39;VER4;VER40;VER41;VER42;VER43;VER45;VER46;VER47;VER48;VER5;VER50;VER6;VER7;VER9;VRG14;VRG15;VRG2;VRG20;VRG22;VRG24;VRG27;VRG28;VRG34;VRG39;VRG43;VRG47;VRG50;VRG7)",
+              "d": 1.19,
+              "c": [
+                {
+                  "n": "(VER1;VER14;VER16;VER19;VER2;VER21;VER22;VER23;VER24;VER25;VER26;VER27;VER28;VER29;VER3;VER34;VER36;VER37;VER38;VER42;VER48;VER5;VER7;VER9;VRG14;VRG15;VRG2;VRG20;VRG22;VRG24;VRG27;VRG28;VRG34;VRG39;VRG43;VRG47;VRG50)",
+                  "d": 0.92,
+                  "c": [
+                    {
+                      "n": "(VER1;VER14;VER16;VER2;VER22;VER24;VER25;VER26;VER27;VER28;VER29;VER3;VER36;VER37;VER42;VER48;VER5;VER7;VER9)",
+                      "d": 0.71,
+                      "c": [
+                        {
+                          "n": "(VER14;VER2;VER22;VER24;VER25;VER29;VER36;VER42;VER48;VER7)",
+                          "d": 0.59,
+                          "c": [
+                            {
+                              "n": "(VER14;VER22;VER24;VER25;VER29;VER42;VER48)",
+                              "d": 0.51,
+                              "c": [
+                                {
+                                  "n": "(VER14;VER24;VER29;VER42)",
+                                  "d": 0.3,
+                                  "c": [
+                                    {
+                                      "n": "(VER14;VER29;VER42)",
+                                      "d": 0.22,
+                                      "c": [
+                                        {
+                                          "n": "(VER14;VER42)",
+                                          "d": 0.14,
+                                          "c": [
+                                            {
+                                              "n": "(VER42)",
+                                              "d": 0.0,
+                                              "c": []
+                                            },
+                                            {
+                                              "n": "(VER14)",
+                                              "d": 0.0,
+                                              "c": []
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "n": "(VER29)",
+                                          "d": 0.0,
+                                          "c": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "n": "(VER24)",
+                                      "d": 0.0,
+                                      "c": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "n": "(VER22;VER25;VER48)",
+                                  "d": 0.38,
+                                  "c": [
+                                    {
+                                      "n": "(VER25;VER48)",
+                                      "d": 0.2,
+                                      "c": [
+                                        {
+                                          "n": "(VER48)",
+                                          "d": 0.0,
+                                          "c": []
+                                        },
+                                        {
+                                          "n": "(VER25)",
+                                          "d": 0.0,
+                                          "c": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "n": "(VER22)",
+                                      "d": 0.0,
+                                      "c": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "n": "(VER2;VER36;VER7)",
+                              "d": 0.42,
+                              "c": [
+                                {
+                                  "n": "(VER2;VER7)",
+                                  "d": 0.26,
+                                  "c": [
+                                    {
+                                      "n": "(VER7)",
+                                      "d": 0.0,
+                                      "c": []
+                                    },
+                                    {
+                                      "n": "(VER2)",
+                                      "d": 0.0,
+                                      "c": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "n": "(VER36)",
+                                  "d": 0.0,
+                                  "c": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "n": "(VER1;VER16;VER26;VER27;VER28;VER3;VER37;VER5;VER9)",
+                          "d": 0.5,
+                          "c": [
+                            {
+                              "n": "(VER1;VER27;VER28;VER3;VER37)",
+                              "d": 0.42,
+                              "c": [
+                                {
+                                  "n": "(VER1;VER27;VER3;VER37)",
+                                  "d": 0.38,
+                                  "c": [
+                                    {
+                                      "n": "(VER1;VER3;VER37)",
+                                      "d": 0.31,
+                                      "c": [
+                                        {
+                                          "n": "(VER1;VER3)",
+                                          "d": 0.26,
+                                          "c": [
+                                            {
+                                              "n": "(VER3)",
+                                              "d": 0.0,
+                                              "c": []
+                                            },
+                                            {
+                                              "n": "(VER1)",
+                                              "d": 0.0,
+                                              "c": []
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "n": "(VER37)",
+                                          "d": 0.0,
+                                          "c": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "n": "(VER27)",
+                                      "d": 0.0,
+                                      "c": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "n": "(VER28)",
+                                  "d": 0.0,
+                                  "c": []
+                                }
+                              ]
+                            },
+                            {
+                              "n": "(VER16;VER26;VER5;VER9)",
+                              "d": 0.33,
+                              "c": [
+                                {
+                                  "n": "(VER5;VER9)",
+                                  "d": 0.24,
+                                  "c": [
+                                    {
+                                      "n": "(VER9)",
+                                      "d": 0.0,
+                                      "c": []
+                                    },
+                                    {
+                                      "n": "(VER5)",
+                                      "d": 0.0,
+                                      "c": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "n": "(VER16;VER26)",
+                                  "d": 0.14,
+                                  "c": [
+                                    {
+                                      "n": "(VER26)",
+                                      "d": 0.0,
+                                      "c": []
+                                    },
+                                    {
+                                      "n": "(VER16)",
+                                      "d": 0.0,
+                                      "c": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "n": "(VER19;VER21;VER23;VER34;VER38;VRG14;VRG15;VRG2;VRG20;VRG22;VRG24;VRG27;VRG28;VRG34;VRG39;VRG43;VRG47;VRG50)",
+                      "d": 0.89,
+                      "c": [
+                        {
+                          "n": "(VER21;VER23;VER34;VRG14;VRG15;VRG2;VRG22;VRG24;VRG27;VRG28;VRG34;VRG39;VRG43;VRG47;VRG50)",
+                          "d": 0.64,
+                          "c": [
+                            {
+                              "n": "(VER21;VER23;VER34;VRG24;VRG27;VRG28;VRG34;VRG39;VRG47;VRG50)",
+                              "d": 0.55,
+                              "c": [
+                                {
+                                  "n": "(VER23;VER34;VRG24;VRG27;VRG34;VRG47)",
+                                  "d": 0.43,
+                                  "c": [
+                                    {
+                                      "n": "(VRG24;VRG27;VRG47)",
+                                      "d": 0.32,
+                                      "c": [
+                                        {
+                                          "n": "(VRG24;VRG27)",
+                                          "d": 0.17,
+                                          "c": [
+                                            {
+                                              "n": "(VRG27)",
+                                              "d": 0.0,
+                                              "c": []
+                                            },
+                                            {
+                                              "n": "(VRG24)",
+                                              "d": 0.0,
+                                              "c": []
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "n": "(VRG47)",
+                                          "d": 0.0,
+                                          "c": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "n": "(VER23;VER34;VRG34)",
+                                      "d": 0.39,
+                                      "c": [
+                                        {
+                                          "n": "(VER34;VRG34)",
+                                          "d": 0.33,
+                                          "c": [
+                                            {
+                                              "n": "(VRG34)",
+                                              "d": 0.0,
+                                              "c": []
+                                            },
+                                            {
+                                              "n": "(VER34)",
+                                              "d": 0.0,
+                                              "c": []
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "n": "(VER23)",
+                                          "d": 0.0,
+                                          "c": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "n": "(VER21;VRG28;VRG39;VRG50)",
+                                  "d": 0.32,
+                                  "c": [
+                                    {
+                                      "n": "(VER21;VRG28;VRG39)",
+                                      "d": 0.26,
+                                      "c": [
+                                        {
+                                          "n": "(VRG28;VRG39)",
+                                          "d": 0.14,
+                                          "c": [
+                                            {
+                                              "n": "(VRG39)",
+                                              "d": 0.0,
+                                              "c": []
+                                            },
+                                            {
+                                              "n": "(VRG28)",
+                                              "d": 0.0,
+                                              "c": []
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "n": "(VER21)",
+                                          "d": 0.0,
+                                          "c": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "n": "(VRG50)",
+                                      "d": 0.0,
+                                      "c": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "n": "(VRG14;VRG15;VRG2;VRG22;VRG43)",
+                              "d": 0.51,
+                              "c": [
+                                {
+                                  "n": "(VRG14;VRG2;VRG22;VRG43)",
+                                  "d": 0.32,
+                                  "c": [
+                                    {
+                                      "n": "(VRG14;VRG2;VRG43)",
+                                      "d": 0.26,
+                                      "c": [
+                                        {
+                                          "n": "(VRG2;VRG43)",
+                                          "d": 0.0,
+                                          "c": [
+                                            {
+                                              "n": "(VRG43)",
+                                              "d": 0.0,
+                                              "c": []
+                                            },
+                                            {
+                                              "n": "(VRG2)",
+                                              "d": 0.0,
+                                              "c": []
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "n": "(VRG14)",
+                                          "d": 0.0,
+                                          "c": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "n": "(VRG22)",
+                                      "d": 0.0,
+                                      "c": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "n": "(VRG15)",
+                                  "d": 0.0,
+                                  "c": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "n": "(VER19;VER38;VRG20)",
+                          "d": 0.62,
+                          "c": [
+                            {
+                              "n": "(VER19;VER38)",
+                              "d": 0.26,
+                              "c": [
+                                {
+                                  "n": "(VER38)",
+                                  "d": 0.0,
+                                  "c": []
+                                },
+                                {
+                                  "n": "(VER19)",
+                                  "d": 0.0,
+                                  "c": []
+                                }
+                              ]
+                            },
+                            {
+                              "n": "(VRG20)",
+                              "d": 0.0,
+                              "c": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "n": "(VER10;VER12;VER13;VER15;VER17;VER18;VER20;VER30;VER31;VER32;VER33;VER35;VER39;VER4;VER40;VER41;VER43;VER45;VER46;VER47;VER50;VER6;VRG7)",
+                  "d": 1.06,
+                  "c": [
+                    {
+                      "n": "(VER10;VER12;VER13;VER15;VER17;VER18;VER20;VER30;VER31;VER32;VER33;VER35;VER39;VER4;VER40;VER41;VER43;VER45;VER46;VER47;VER50;VER6)",
+                      "d": 0.78,
+                      "c": [
+                        {
+                          "n": "(VER10;VER12;VER15;VER17;VER18;VER20;VER30;VER31;VER32;VER33;VER35;VER39;VER4;VER40;VER41;VER43;VER45;VER46;VER47;VER50;VER6)",
+                          "d": 0.68,
+                          "c": [
+                            {
+                              "n": "(VER12;VER17;VER18;VER33;VER35;VER39;VER41;VER43;VER45;VER46;VER47;VER50;VER6)",
+                              "d": 0.53,
+                              "c": [
+                                {
+                                  "n": "(VER12;VER18;VER33;VER39;VER43;VER45;VER46;VER47;VER50)",
+                                  "d": 0.41,
+                                  "c": [
+                                    {
+                                      "n": "(VER12;VER39;VER45;VER46;VER47;VER50)",
+                                      "d": 0.37,
+                                      "c": [
+                                        {
+                                          "n": "(VER39;VER45;VER46;VER47;VER50)",
+                                          "d": 0.25,
+                                          "c": [
+                                            {
+                                              "n": "(VER39;VER46;VER47)",
+                                              "d": 0.17,
+                                              "c": [
+                                                {
+                                                  "n": "(VER46;VER47)",
+                                                  "d": 0.14,
+                                                  "c": [
+                                                    {
+                                                      "n": "(VER47)",
+                                                      "d": 0.0,
+                                                      "c": []
+                                                    },
+                                                    {
+                                                      "n": "(VER46)",
+                                                      "d": 0.0,
+                                                      "c": []
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "n": "(VER39)",
+                                                  "d": 0.0,
+                                                  "c": []
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "n": "(VER45;VER50)",
+                                              "d": 0.17,
+                                              "c": [
+                                                {
+                                                  "n": "(VER50)",
+                                                  "d": 0.0,
+                                                  "c": []
+                                                },
+                                                {
+                                                  "n": "(VER45)",
+                                                  "d": 0.0,
+                                                  "c": []
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "n": "(VER12)",
+                                          "d": 0.0,
+                                          "c": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "n": "(VER18;VER33;VER43)",
+                                      "d": 0.26,
+                                      "c": [
+                                        {
+                                          "n": "(VER33;VER43)",
+                                          "d": 0.14,
+                                          "c": [
+                                            {
+                                              "n": "(VER43)",
+                                              "d": 0.0,
+                                              "c": []
+                                            },
+                                            {
+                                              "n": "(VER33)",
+                                              "d": 0.0,
+                                              "c": []
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "n": "(VER18)",
+                                          "d": 0.0,
+                                          "c": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "n": "(VER17;VER35;VER41;VER6)",
+                                  "d": 0.44,
+                                  "c": [
+                                    {
+                                      "n": "(VER41;VER6)",
+                                      "d": 0.32,
+                                      "c": [
+                                        {
+                                          "n": "(VER6)",
+                                          "d": 0.0,
+                                          "c": []
+                                        },
+                                        {
+                                          "n": "(VER41)",
+                                          "d": 0.0,
+                                          "c": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "n": "(VER17;VER35)",
+                                      "d": 0.2,
+                                      "c": [
+                                        {
+                                          "n": "(VER35)",
+                                          "d": 0.0,
+                                          "c": []
+                                        },
+                                        {
+                                          "n": "(VER17)",
+                                          "d": 0.0,
+                                          "c": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "n": "(VER10;VER15;VER20;VER30;VER31;VER32;VER4;VER40)",
+                              "d": 0.57,
+                              "c": [
+                                {
+                                  "n": "(VER10;VER20;VER31;VER32;VER4;VER40)",
+                                  "d": 0.52,
+                                  "c": [
+                                    {
+                                      "n": "(VER20;VER31;VER32;VER4;VER40)",
+                                      "d": 0.34,
+                                      "c": [
+                                        {
+                                          "n": "(VER20;VER31;VER32)",
+                                          "d": 0.22,
+                                          "c": [
+                                            {
+                                              "n": "(VER31;VER32)",
+                                              "d": 0.14,
+                                              "c": [
+                                                {
+                                                  "n": "(VER32)",
+                                                  "d": 0.0,
+                                                  "c": []
+                                                },
+                                                {
+                                                  "n": "(VER31)",
+                                                  "d": 0.0,
+                                                  "c": []
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "n": "(VER20)",
+                                              "d": 0.0,
+                                              "c": []
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "n": "(VER4;VER40)",
+                                          "d": 0.2,
+                                          "c": [
+                                            {
+                                              "n": "(VER40)",
+                                              "d": 0.0,
+                                              "c": []
+                                            },
+                                            {
+                                              "n": "(VER4)",
+                                              "d": 0.0,
+                                              "c": []
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "n": "(VER10)",
+                                      "d": 0.0,
+                                      "c": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "n": "(VER15;VER30)",
+                                  "d": 0.45,
+                                  "c": [
+                                    {
+                                      "n": "(VER30)",
+                                      "d": 0.0,
+                                      "c": []
+                                    },
+                                    {
+                                      "n": "(VER15)",
+                                      "d": 0.0,
+                                      "c": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "n": "(VER13)",
+                          "d": 0.0,
+                          "c": []
+                        }
+                      ]
+                    },
+                    {
+                      "n": "(VRG7)",
+                      "d": 0.0,
+                      "c": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "n": "(VER11;VER44;VER49;VER8)",
+              "d": 0.51,
+              "c": [
+                {
+                  "n": "(VER44;VER49;VER8)",
+                  "d": 0.39,
+                  "c": [
+                    {
+                      "n": "(VER44;VER8)",
+                      "d": 0.14,
+                      "c": [
+                        {
+                          "n": "(VER8)",
+                          "d": 0.0,
+                          "c": []
+                        },
+                        {
+                          "n": "(VER44)",
+                          "d": 0.0,
+                          "c": []
+                        }
+                      ]
+                    },
+                    {
+                      "n": "(VER49)",
+                      "d": 0.0,
+                      "c": []
+                    }
+                  ]
+                },
+                {
+                  "n": "(VER11)",
+                  "d": 0.0,
+                  "c": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "n": "(VRG1;VRG10;VRG11;VRG12;VRG13;VRG16;VRG17;VRG18;VRG19;VRG21;VRG23;VRG25;VRG26;VRG29;VRG3;VRG30;VRG31;VRG32;VRG33;VRG35;VRG36;VRG37;VRG38;VRG4;VRG40;VRG41;VRG42;VRG44;VRG45;VRG46;VRG48;VRG49;VRG5;VRG6;VRG8;VRG9)",
+          "d": 1.38,
+          "c": [
+            {
+              "n": "(VRG1;VRG11;VRG12;VRG13;VRG16;VRG17;VRG21;VRG25;VRG29;VRG33;VRG35;VRG37;VRG38;VRG4;VRG40;VRG41;VRG42;VRG44;VRG45;VRG46;VRG48;VRG49;VRG5;VRG9)",
+              "d": 0.97,
+              "c": [
+                {
+                  "n": "(VRG1;VRG11;VRG12;VRG13;VRG16;VRG17;VRG21;VRG25;VRG29;VRG33;VRG37;VRG38;VRG4;VRG40;VRG41;VRG42;VRG44;VRG45;VRG46;VRG48;VRG49;VRG5)",
+                  "d": 0.67,
+                  "c": [
+                    {
+                      "n": "(VRG11;VRG12;VRG13;VRG17;VRG29;VRG33;VRG38;VRG4;VRG40;VRG42;VRG46;VRG48;VRG5)",
+                      "d": 0.6,
+                      "c": [
+                        {
+                          "n": "(VRG12;VRG17;VRG29;VRG33;VRG38;VRG4;VRG5)",
+                          "d": 0.46,
+                          "c": [
+                            {
+                              "n": "(VRG12;VRG17;VRG38;VRG4)",
+                              "d": 0.41,
+                              "c": [
+                                {
+                                  "n": "(VRG17;VRG38;VRG4)",
+                                  "d": 0.24,
+                                  "c": [
+                                    {
+                                      "n": "(VRG17;VRG38)",
+                                      "d": 0.14,
+                                      "c": [
+                                        {
+                                          "n": "(VRG38)",
+                                          "d": 0.0,
+                                          "c": []
+                                        },
+                                        {
+                                          "n": "(VRG17)",
+                                          "d": 0.0,
+                                          "c": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "n": "(VRG4)",
+                                      "d": 0.0,
+                                      "c": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "n": "(VRG12)",
+                                  "d": 0.0,
+                                  "c": []
+                                }
+                              ]
+                            },
+                            {
+                              "n": "(VRG29;VRG33;VRG5)",
+                              "d": 0.31,
+                              "c": [
+                                {
+                                  "n": "(VRG29;VRG33)",
+                                  "d": 0.1,
+                                  "c": [
+                                    {
+                                      "n": "(VRG33)",
+                                      "d": 0.0,
+                                      "c": []
+                                    },
+                                    {
+                                      "n": "(VRG29)",
+                                      "d": 0.0,
+                                      "c": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "n": "(VRG5)",
+                                  "d": 0.0,
+                                  "c": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "n": "(VRG11;VRG13;VRG40;VRG42;VRG46;VRG48)",
+                          "d": 0.47,
+                          "c": [
+                            {
+                              "n": "(VRG13;VRG40;VRG42;VRG46)",
+                              "d": 0.39,
+                              "c": [
+                                {
+                                  "n": "(VRG42;VRG46)",
+                                  "d": 0.24,
+                                  "c": [
+                                    {
+                                      "n": "(VRG46)",
+                                      "d": 0.0,
+                                      "c": []
+                                    },
+                                    {
+                                      "n": "(VRG42)",
+                                      "d": 0.0,
+                                      "c": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "n": "(VRG13;VRG40)",
+                                  "d": 0.17,
+                                  "c": [
+                                    {
+                                      "n": "(VRG40)",
+                                      "d": 0.0,
+                                      "c": []
+                                    },
+                                    {
+                                      "n": "(VRG13)",
+                                      "d": 0.0,
+                                      "c": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "n": "(VRG11;VRG48)",
+                              "d": 0.22,
+                              "c": [
+                                {
+                                  "n": "(VRG48)",
+                                  "d": 0.0,
+                                  "c": []
+                                },
+                                {
+                                  "n": "(VRG11)",
+                                  "d": 0.0,
+                                  "c": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "n": "(VRG1;VRG16;VRG21;VRG25;VRG37;VRG41;VRG44;VRG45;VRG49)",
+                      "d": 0.61,
+                      "c": [
+                        {
+                          "n": "(VRG1;VRG21;VRG25;VRG41;VRG44;VRG45)",
+                          "d": 0.6,
+                          "c": [
+                            {
+                              "n": "(VRG21;VRG25;VRG41;VRG44;VRG45)",
+                              "d": 0.35,
+                              "c": [
+                                {
+                                  "n": "(VRG21;VRG41;VRG44;VRG45)",
+                                  "d": 0.31,
+                                  "c": [
+                                    {
+                                      "n": "(VRG41;VRG45)",
+                                      "d": 0.24,
+                                      "c": [
+                                        {
+                                          "n": "(VRG45)",
+                                          "d": 0.0,
+                                          "c": []
+                                        },
+                                        {
+                                          "n": "(VRG41)",
+                                          "d": 0.0,
+                                          "c": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "n": "(VRG21;VRG44)",
+                                      "d": 0.22,
+                                      "c": [
+                                        {
+                                          "n": "(VRG44)",
+                                          "d": 0.0,
+                                          "c": []
+                                        },
+                                        {
+                                          "n": "(VRG21)",
+                                          "d": 0.0,
+                                          "c": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "n": "(VRG25)",
+                                  "d": 0.0,
+                                  "c": []
+                                }
+                              ]
+                            },
+                            {
+                              "n": "(VRG1)",
+                              "d": 0.0,
+                              "c": []
+                            }
+                          ]
+                        },
+                        {
+                          "n": "(VRG16;VRG37;VRG49)",
+                          "d": 0.34,
+                          "c": [
+                            {
+                              "n": "(VRG37;VRG49)",
+                              "d": 0.24,
+                              "c": [
+                                {
+                                  "n": "(VRG49)",
+                                  "d": 0.0,
+                                  "c": []
+                                },
+                                {
+                                  "n": "(VRG37)",
+                                  "d": 0.0,
+                                  "c": []
+                                }
+                              ]
+                            },
+                            {
+                              "n": "(VRG16)",
+                              "d": 0.0,
+                              "c": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "n": "(VRG35;VRG9)",
+                  "d": 0.75,
+                  "c": [
+                    {
+                      "n": "(VRG9)",
+                      "d": 0.0,
+                      "c": []
+                    },
+                    {
+                      "n": "(VRG35)",
+                      "d": 0.0,
+                      "c": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "n": "(VRG10;VRG18;VRG19;VRG23;VRG26;VRG3;VRG30;VRG31;VRG32;VRG36;VRG6;VRG8)",
+              "d": 1.09,
+              "c": [
+                {
+                  "n": "(VRG19;VRG23;VRG26;VRG3;VRG30;VRG31;VRG36;VRG6;VRG8)",
+                  "d": 0.9,
+                  "c": [
+                    {
+                      "n": "(VRG26;VRG3;VRG30;VRG31;VRG36;VRG8)",
+                      "d": 0.71,
+                      "c": [
+                        {
+                          "n": "(VRG26;VRG3;VRG30;VRG31;VRG8)",
+                          "d": 0.5,
+                          "c": [
+                            {
+                              "n": "(VRG26;VRG3;VRG30)",
+                              "d": 0.45,
+                              "c": [
+                                {
+                                  "n": "(VRG26;VRG30)",
+                                  "d": 0.35,
+                                  "c": [
+                                    {
+                                      "n": "(VRG30)",
+                                      "d": 0.0,
+                                      "c": []
+                                    },
+                                    {
+                                      "n": "(VRG26)",
+                                      "d": 0.0,
+                                      "c": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "n": "(VRG3)",
+                                  "d": 0.0,
+                                  "c": []
+                                }
+                              ]
+                            },
+                            {
+                              "n": "(VRG31;VRG8)",
+                              "d": 0.26,
+                              "c": [
+                                {
+                                  "n": "(VRG8)",
+                                  "d": 0.0,
+                                  "c": []
+                                },
+                                {
+                                  "n": "(VRG31)",
+                                  "d": 0.0,
+                                  "c": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "n": "(VRG36)",
+                          "d": 0.0,
+                          "c": []
+                        }
+                      ]
+                    },
+                    {
+                      "n": "(VRG19;VRG23;VRG6)",
+                      "d": 0.48,
+                      "c": [
+                        {
+                          "n": "(VRG23;VRG6)",
+                          "d": 0.26,
+                          "c": [
+                            {
+                              "n": "(VRG6)",
+                              "d": 0.0,
+                              "c": []
+                            },
+                            {
+                              "n": "(VRG23)",
+                              "d": 0.0,
+                              "c": []
+                            }
+                          ]
+                        },
+                        {
+                          "n": "(VRG19)",
+                          "d": 0.0,
+                          "c": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "n": "(VRG10;VRG18;VRG32)",
+                  "d": 0.9,
+                  "c": [
+                    {
+                      "n": "(VRG18;VRG32)",
+                      "d": 0.41,
+                      "c": [
+                        {
+                          "n": "(VRG32)",
+                          "d": 0.0,
+                          "c": []
+                        },
+                        {
+                          "n": "(VRG18)",
+                          "d": 0.0,
+                          "c": []
+                        }
+                      ]
+                    },
+                    {
+                      "n": "(VRG10)",
+                      "d": 0.0,
+                      "c": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": "(SET1;SET10;SET11;SET12;SET13;SET14;SET15;SET16;SET17;SET18;SET19;SET2;SET20;SET21;SET22;SET23;SET24;SET25;SET26;SET27;SET28;SET29;SET3;SET30;SET31;SET32;SET33;SET34;SET35;SET36;SET37;SET38;SET39;SET4;SET40;SET41;SET42;SET43;SET44;SET45;SET46;SET47;SET48;SET49;SET5;SET50;SET6;SET7;SET8;SET9)",
+      "d": 1.31,
+      "c": [
+        {
+          "n": "(SET1;SET10;SET11;SET12;SET13;SET14;SET15;SET16;SET17;SET18;SET19;SET2;SET20;SET21;SET22;SET23;SET24;SET25;SET26;SET27;SET28;SET29;SET3;SET30;SET31;SET32;SET33;SET34;SET35;SET36;SET37;SET38;SET39;SET4;SET40;SET41;SET43;SET44;SET45;SET46;SET47;SET48;SET49;SET5;SET50;SET6;SET7;SET8;SET9)",
+          "d": 1.08,
+          "c": [
+            {
+              "n": "(SET1;SET10;SET11;SET12;SET13;SET14;SET17;SET18;SET19;SET2;SET20;SET21;SET22;SET23;SET24;SET25;SET26;SET27;SET28;SET29;SET3;SET30;SET31;SET32;SET35;SET36;SET37;SET38;SET39;SET4;SET40;SET41;SET43;SET44;SET45;SET46;SET47;SET48;SET49;SET5;SET50;SET6;SET7;SET8;SET9)",
+              "d": 0.76,
+              "c": [
+                {
+                  "n": "(SET1;SET11;SET17;SET18;SET19;SET20;SET21;SET22;SET24;SET27;SET28;SET29;SET32;SET36;SET37;SET40;SET41;SET44;SET45;SET47;SET49;SET5;SET50;SET6;SET8)",
+                  "d": 0.54,
+                  "c": [
+                    {
+                      "n": "(SET1;SET18;SET21;SET24;SET27;SET28;SET29;SET32;SET36;SET37;SET40;SET41;SET44;SET5;SET50;SET8)",
+                      "d": 0.47,
+                      "c": [
+                        {
+                          "n": "(SET1;SET18;SET24;SET27;SET28;SET29;SET36;SET40;SET41;SET44;SET5;SET50;SET8)",
+                          "d": 0.41,
+                          "c": [
+                            {
+                              "n": "(SET1;SET18;SET28;SET29;SET36;SET40;SET41;SET5;SET50;SET8)",
+                              "d": 0.37,
+                              "c": [
+                                {
+                                  "n": "(SET1;SET18;SET28;SET29;SET40;SET41;SET5;SET50;SET8)",
+                                  "d": 0.22,
+                                  "c": [
+                                    {
+                                      "n": "(SET28;SET29;SET40;SET50;SET8)",
+                                      "d": 0.21,
+                                      "c": [
+                                        {
+                                          "n": "(SET40;SET50;SET8)",
+                                          "d": 0.16,
+                                          "c": [
+                                            {
+                                              "n": "(SET40;SET8)",
+                                              "d": 0.1,
+                                              "c": [
+                                                {
+                                                  "n": "(SET8)",
+                                                  "d": 0.0,
+                                                  "c": []
+                                                },
+                                                {
+                                                  "n": "(SET40)",
+                                                  "d": 0.0,
+                                                  "c": []
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "n": "(SET50)",
+                                              "d": 0.0,
+                                              "c": []
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "n": "(SET28;SET29)",
+                                          "d": 0.14,
+                                          "c": [
+                                            {
+                                              "n": "(SET29)",
+                                              "d": 0.0,
+                                              "c": []
+                                            },
+                                            {
+                                              "n": "(SET28)",
+                                              "d": 0.0,
+                                              "c": []
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "n": "(SET1;SET18;SET41;SET5)",
+                                      "d": 0.16,
+                                      "c": [
+                                        {
+                                          "n": "(SET1;SET18;SET41)",
+                                          "d": 0.16,
+                                          "c": [
+                                            {
+                                              "n": "(SET1;SET18)",
+                                              "d": 0.1,
+                                              "c": [
+                                                {
+                                                  "n": "(SET18)",
+                                                  "d": 0.0,
+                                                  "c": []
+                                                },
+                                                {
+                                                  "n": "(SET1)",
+                                                  "d": 0.0,
+                                                  "c": []
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "n": "(SET41)",
+                                              "d": 0.0,
+                                              "c": []
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "n": "(SET5)",
+                                          "d": 0.0,
+                                          "c": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "n": "(SET36)",
+                                  "d": 0.0,
+                                  "c": []
+                                }
+                              ]
+                            },
+                            {
+                              "n": "(SET24;SET27;SET44)",
+                              "d": 0.24,
+                              "c": [
+                                {
+                                  "n": "(SET24;SET27)",
+                                  "d": 0.2,
+                                  "c": [
+                                    {
+                                      "n": "(SET27)",
+                                      "d": 0.0,
+                                      "c": []
+                                    },
+                                    {
+                                      "n": "(SET24)",
+                                      "d": 0.0,
+                                      "c": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "n": "(SET44)",
+                                  "d": 0.0,
+                                  "c": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "n": "(SET21;SET32;SET37)",
+                          "d": 0.37,
+                          "c": [
+                            {
+                              "n": "(SET21;SET32)",
+                              "d": 0.28,
+                              "c": [
+                                {
+                                  "n": "(SET32)",
+                                  "d": 0.0,
+                                  "c": []
+                                },
+                                {
+                                  "n": "(SET21)",
+                                  "d": 0.0,
+                                  "c": []
+                                }
+                              ]
+                            },
+                            {
+                              "n": "(SET37)",
+                              "d": 0.0,
+                              "c": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "n": "(SET11;SET17;SET19;SET20;SET22;SET45;SET47;SET49;SET6)",
+                      "d": 0.49,
+                      "c": [
+                        {
+                          "n": "(SET11;SET17;SET19;SET20;SET22;SET47;SET49;SET6)",
+                          "d": 0.46,
+                          "c": [
+                            {
+                              "n": "(SET11;SET17;SET20;SET22;SET47;SET49)",
+                              "d": 0.4,
+                              "c": [
+                                {
+                                  "n": "(SET11;SET20;SET22;SET47;SET49)",
+                                  "d": 0.3,
+                                  "c": [
+                                    {
+                                      "n": "(SET20;SET22;SET47)",
+                                      "d": 0.19,
+                                      "c": [
+                                        {
+                                          "n": "(SET20;SET22)",
+                                          "d": 0.14,
+                                          "c": [
+                                            {
+                                              "n": "(SET22)",
+                                              "d": 0.0,
+                                              "c": []
+                                            },
+                                            {
+                                              "n": "(SET20)",
+                                              "d": 0.0,
+                                              "c": []
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "n": "(SET47)",
+                                          "d": 0.0,
+                                          "c": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "n": "(SET11;SET49)",
+                                      "d": 0.1,
+                                      "c": [
+                                        {
+                                          "n": "(SET49)",
+                                          "d": 0.0,
+                                          "c": []
+                                        },
+                                        {
+                                          "n": "(SET11)",
+                                          "d": 0.0,
+                                          "c": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "n": "(SET17)",
+                                  "d": 0.0,
+                                  "c": []
+                                }
+                              ]
+                            },
+                            {
+                              "n": "(SET19;SET6)",
+                              "d": 0.33,
+                              "c": [
+                                {
+                                  "n": "(SET6)",
+                                  "d": 0.0,
+                                  "c": []
+                                },
+                                {
+                                  "n": "(SET19)",
+                                  "d": 0.0,
+                                  "c": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "n": "(SET45)",
+                          "d": 0.0,
+                          "c": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "n": "(SET10;SET12;SET13;SET14;SET2;SET23;SET25;SET26;SET3;SET30;SET31;SET35;SET38;SET39;SET4;SET43;SET46;SET48;SET7;SET9)",
+                  "d": 0.72,
+                  "c": [
+                    {
+                      "n": "(SET10;SET12;SET13;SET14;SET2;SET25;SET26;SET3;SET30;SET31;SET35;SET38;SET39;SET4;SET43;SET46;SET48;SET7;SET9)",
+                      "d": 0.55,
+                      "c": [
+                        {
+                          "n": "(SET10;SET12;SET13;SET2;SET25;SET26;SET3;SET30;SET31;SET35;SET38;SET4;SET46;SET48;SET7)",
+                          "d": 0.46,
+                          "c": [
+                            {
+                              "n": "(SET10;SET13;SET2;SET26;SET3;SET30;SET31;SET35;SET38;SET4;SET46;SET48;SET7)",
+                              "d": 0.35,
+                              "c": [
+                                {
+                                  "n": "(SET10;SET13;SET2;SET26;SET30;SET31;SET35;SET38;SET46)",
+                                  "d": 0.26,
+                                  "c": [
+                                    {
+                                      "n": "(SET10;SET13;SET2;SET26;SET35;SET38;SET46)",
+                                      "d": 0.22,
+                                      "c": [
+                                        {
+                                          "n": "(SET10;SET26;SET35;SET38)",
+                                          "d": 0.2,
+                                          "c": [
+                                            {
+                                              "n": "(SET10;SET35;SET38)",
+                                              "d": 0.0,
+                                              "c": [
+                                                {
+                                                  "n": "(SET10;SET38)",
+                                                  "d": 0.0,
+                                                  "c": [
+                                                    {
+                                                      "n": "(SET38)",
+                                                      "d": 0.0,
+                                                      "c": []
+                                                    },
+                                                    {
+                                                      "n": "(SET10)",
+                                                      "d": 0.0,
+                                                      "c": []
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "n": "(SET35)",
+                                                  "d": 0.0,
+                                                  "c": []
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "n": "(SET26)",
+                                              "d": 0.0,
+                                              "c": []
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "n": "(SET13;SET2;SET46)",
+                                          "d": 0.17,
+                                          "c": [
+                                            {
+                                              "n": "(SET2;SET46)",
+                                              "d": 0.14,
+                                              "c": [
+                                                {
+                                                  "n": "(SET46)",
+                                                  "d": 0.0,
+                                                  "c": []
+                                                },
+                                                {
+                                                  "n": "(SET2)",
+                                                  "d": 0.0,
+                                                  "c": []
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "n": "(SET13)",
+                                              "d": 0.0,
+                                              "c": []
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "n": "(SET30;SET31)",
+                                      "d": 0.14,
+                                      "c": [
+                                        {
+                                          "n": "(SET31)",
+                                          "d": 0.0,
+                                          "c": []
+                                        },
+                                        {
+                                          "n": "(SET30)",
+                                          "d": 0.0,
+                                          "c": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "n": "(SET3;SET4;SET48;SET7)",
+                                  "d": 0.27,
+                                  "c": [
+                                    {
+                                      "n": "(SET3;SET4;SET48)",
+                                      "d": 0.19,
+                                      "c": [
+                                        {
+                                          "n": "(SET4;SET48)",
+                                          "d": 0.14,
+                                          "c": [
+                                            {
+                                              "n": "(SET48)",
+                                              "d": 0.0,
+                                              "c": []
+                                            },
+                                            {
+                                              "n": "(SET4)",
+                                              "d": 0.0,
+                                              "c": []
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "n": "(SET3)",
+                                          "d": 0.0,
+                                          "c": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "n": "(SET7)",
+                                      "d": 0.0,
+                                      "c": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "n": "(SET12;SET25)",
+                              "d": 0.3,
+                              "c": [
+                                {
+                                  "n": "(SET25)",
+                                  "d": 0.0,
+                                  "c": []
+                                },
+                                {
+                                  "n": "(SET12)",
+                                  "d": 0.0,
+                                  "c": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "n": "(SET14;SET39;SET43;SET9)",
+                          "d": 0.3,
+                          "c": [
+                            {
+                              "n": "(SET39;SET43;SET9)",
+                              "d": 0.26,
+                              "c": [
+                                {
+                                  "n": "(SET39;SET9)",
+                                  "d": 0.14,
+                                  "c": [
+                                    {
+                                      "n": "(SET9)",
+                                      "d": 0.0,
+                                      "c": []
+                                    },
+                                    {
+                                      "n": "(SET39)",
+                                      "d": 0.0,
+                                      "c": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "n": "(SET43)",
+                                  "d": 0.0,
+                                  "c": []
+                                }
+                              ]
+                            },
+                            {
+                              "n": "(SET14)",
+                              "d": 0.0,
+                              "c": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "n": "(SET23)",
+                      "d": 0.0,
+                      "c": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "n": "(SET15;SET16;SET33;SET34)",
+              "d": 0.55,
+              "c": [
+                {
+                  "n": "(SET16;SET33;SET34)",
+                  "d": 0.51,
+                  "c": [
+                    {
+                      "n": "(SET33;SET34)",
+                      "d": 0.35,
+                      "c": [
+                        {
+                          "n": "(SET34)",
+                          "d": 0.0,
+                          "c": []
+                        },
+                        {
+                          "n": "(SET33)",
+                          "d": 0.0,
+                          "c": []
+                        }
+                      ]
+                    },
+                    {
+                      "n": "(SET16)",
+                      "d": 0.0,
+                      "c": []
+                    }
+                  ]
+                },
+                {
+                  "n": "(SET15)",
+                  "d": 0.0,
+                  "c": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "n": "(SET42)",
+          "d": 0.0,
+          "c": []
+        }
+      ]
+    }
+  ]
+}
