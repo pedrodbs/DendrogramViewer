@@ -72,7 +72,7 @@ For example, the following json was produced by using the [Aglomera.NET](https:/
 }
 ```
 
-###Loading files
+### Loading files
 
 The application automatically loads a default json file from the `examples` folder. Manual file selection can be achieved in two ways:
 
@@ -91,7 +91,7 @@ The application automatically loads a default json file from the `examples` fold
 
 To export / download the dendrogram into an SVG ([Scalable Vector Graphics](https://en.wikipedia.org/wiki/Scalable_Vector_Graphics)) file, click the `Download SVG` button. <u>Note:</u> this will export an image file with basic element styling, *e.g.*, colors and weights. For full formatting place the `styles.css` in the same folder (and possibly customize the style file).
 
-###Visual options
+### Visual options
 
 #### **Cluster Label Visualization**
 
@@ -99,13 +99,13 @@ Supports *viewing the labels* of each cluster (usually the instances contained t
 
 ![Labels](img/labels.png)
 
-####**Layout**
+#### **Layout**
 
 Supports both *vertical* and *horizontal* dendrogram layouts by toggling the `Vertical layout` check-box.
 
 ![Horizontal layout](img/horizontal.png)
 
-####**Links Layout**
+#### **Links Layout**
 
 Supports both *straight* and *rounded* tree branch links by toggling the `Straight links` check-box.
 
