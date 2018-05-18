@@ -1,4 +1,5 @@
-MIT License
+DendrogramViewer License (MIT)
+===================================
 
 Copyright (c) 2018 Pedro Sequeira
 
